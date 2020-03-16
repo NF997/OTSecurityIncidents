@@ -1,11 +1,9 @@
 # Real World ICS Incidents
 
 ## Important Names & Companies
-
 - Michael Assante
 
 ## ICS Cyber Kill Chain
-
 - Stage 1: Access to the environment
   - Recon
   - Weaponization / Targeting
@@ -41,12 +39,10 @@
 ### 2017
 
 ## Problems
-
 - ICS systems become more and more homogeneous -> attacks become scalable and replicatable
 
 ## Countermeasures
-
 - We should focus more on behaviours and TTPs instead of anomalies
 
-
-
+## MISC
+- [GRID Certification](https://www.giac.org/certification/response-industrial-defense-grid)
