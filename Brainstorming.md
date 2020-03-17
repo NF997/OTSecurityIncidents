@@ -46,3 +46,8 @@
 
 ## MISC
 - [GRID Certification](https://www.giac.org/certification/response-industrial-defense-grid)
+
+## Resources
+
+### Whitepapers
+- Hacking Chemical Plants for Competition and Extortion
