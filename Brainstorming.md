@@ -1,12 +1,14 @@
 # Real World ICS Incidents
 
 ## Definitions
-- ICS: 
+- OT: Voting machines, [?] + ICS
+- ICS: [?] + SCADA
 
 ## Important People & Companies
 - Michael Assante (+)
 - Robert Lee (Dragos)
 - Austin Scott (Dragos)
+- Bryson Bort (SCYTHE)
 
 ## Methodologies
 
@@ -76,6 +78,15 @@
 - 7 activity groups operate across verticals
 - Parisite (since 2017)
 - Wassonite (since 2018)
+
+## Nationstate Threat Actors
+- USA
+- UK
+- China
+- Israel
+- Russia
+- North Korea
+- Iran
 
 ## MITRE ATT&CK for ICS
 - Knowledge base of adversary tactics and technics based on intelligence-driven data
