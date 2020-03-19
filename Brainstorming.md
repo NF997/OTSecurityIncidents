@@ -1,9 +1,13 @@
 # Real World ICS Incidents
 
 ## Important Names & Companies
-- Michael Assante
+- Michael Assante (+)
+- Robert Lee (Dragos)
+- Austin Scott (Dragos)
 
-## ICS Cyber Kill Chain
+## Methodologies
+
+### ICS Cyber Kill Chain
 - Stage 1: Access to the environment
   - Recon
   - Weaponization / Targeting
@@ -38,16 +42,16 @@
 
 ### 2017
 
-## Problems
+## Problems / Challenges
 - ICS systems become more and more homogeneous -> attacks become scalable and replicatable
 
 ## Countermeasures
 - We should focus more on behaviours and TTPs instead of anomalies
 
-## MISC
-- [GRID Certification](https://www.giac.org/certification/response-industrial-defense-grid)
-
 ## Resources
 
 ### Whitepapers
 - Hacking Chemical Plants for Competition and Extortion
+
+## Certifications
+- [GRID Certification](https://www.giac.org/certification/response-industrial-defense-grid)
