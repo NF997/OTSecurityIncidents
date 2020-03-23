@@ -44,23 +44,27 @@
 ## Incidents
 
 - RISI Database: https://www.risidata.com
+- ICS-CERT Alerts from the US Government: https://www.us-cert.gov/ics/alerts
 
-### Blackenergy3 in Ukraine 2015
+### BlackEnergy in Ukraine 2015
 - Electric Power System in West Ukraine
+- First known cyberattack on civilian infrastructure
 - First time a cyber attack caused an electrical outage (67 substations disconnected at distribution level)
 - 230.000-250.000 people without power in freezing temperatures
+- BlackEnergy malware used for recon
 - No ICS/SCADA protocol or PLC payloads, but mostly on the IT side
 - Initial infiltration via macro documents -> user credential compromise for access, manual manipulation of SCADA controls (HMI/rdesktop)
 - Firmaware attacks (Uninterruptable Power Supply (UPS), serial-to-ethernet)
 - Stage 2: 6 months learning about the environment (looking for assets and found 700 Windos PCs).
 - The attackers effectively became remote operators.
-- After 6 months the attackers started to disconnect power and uploaded malware to serial-to-ethernet devices.
+- After 6 months (dwell time) the attackers started to disconnect power and uploaded malware to serial-to-ethernet devices.
 - Not a scalable attack.
 
-### Industroyer/Crashoverride (Electric Power System) in Ukraine 2016
+### Industroyer/CRASHOVERRIDE (Electric Power System) in Ukraine 2016
 - Kiev (capital)
-- 700.000 people (1/5 of Kiev) without power in freezing temp
+- 700.000 people (1/5 of Kiev) without power in freezing temp (?)
 - Much more complex than Blackenergy
+- CRASHOVERRIDE framework used
 - Many ICS/SCADA protocol payloads, many behaviours on both IT & OT side
 - Comromised user accounts & attacker created accounts
 - Used LoL (?) commands to pivot into ICS/SCADA via Windows LM/SQL
@@ -68,8 +72,10 @@
 - At transmission level
 - The attackers leraned from 2015 and made the attack scalable
 - Blueprint, not a targeted attack
+- Unclear why it was not more widespread
+- Infection vector (kill chain stage 1) is unknown
 
-### 2017 Triton/Trisis (Saudi Arabia)
+### 2017 Triton/Trisis/Hatman (Saudi Arabia)
 - A lot of information about this incident is incorrect
 - Petrochemical plant
 - Attack was designed to kill people
