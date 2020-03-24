@@ -1,8 +1,8 @@
 # Real World ICS Incidents
 
 ## Definitions
-- OT: Voting machines, [?] + ICS
-- ICS: [?] + SCADA
+- OT: Voting machines, (I)IoT, [?] + ICS
+- ICS (as defined by NIST): [?] + SCADA 
 
 ## Important People & Companies
 - Michael Assante (+)
@@ -65,8 +65,9 @@
 - 700.000 people (1/5 of Kiev) without power in freezing temp (?)
 - Much more complex than Blackenergy
 - CRASHOVERRIDE framework used
+- Required significant pre-positioning
 - Many ICS/SCADA protocol payloads, many behaviours on both IT & OT side
-- Comromised user accounts & attacker created accounts
+- Credential capture via Mimikatz (could be detected with a signature-based approach) -> Comromised user accounts & attacker created accounts
 - Used LoL (?) commands to pivot into ICS/SCADA via Windows LM/SQL
 - Spoofed ICS/SCADA ommand messages
 - At transmission level
@@ -74,6 +75,8 @@
 - Blueprint, not a targeted attack
 - Unclear why it was not more widespread
 - Infection vector (kill chain stage 1) is unknown
+- Threat actors involved:
+  - ELECTRUM
 
 ### 2017 Triton/Trisis/Hatman (Saudi Arabia)
 - A lot of information about this incident is incorrect
@@ -137,8 +140,10 @@
 ## Resources
 
 ### Whitepapers
-- Hacking Chemical Plants for Competition and Extortion
-- Dragos ICS Vulnerabilities / Threat Landscape / Front-Line Lessons Learned
+- [ ] History of Industrial Control System Cyber Incidents
+- [ ] Evolution of ICS Attacks and the Prospects for Future Disruptive Events
+- [ ] Hacking Chemical Plants for Competition and Extortion
+- [ ] Dragos ICS Vulnerabilities / Threat Landscape / Front-Line Lessons Learned
 
 ## Certifications
 - [GRID Certification](https://www.giac.org/certification/response-industrial-defense-grid)
