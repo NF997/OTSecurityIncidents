@@ -54,8 +54,8 @@
 - BlackEnergy malware used for recon
 - No ICS/SCADA protocol or PLC payloads, but mostly on the IT side
 - Initial infiltration via macro documents -> user credential compromise for access, manual manipulation of SCADA controls (HMI/rdesktop)
-- Firmaware attacks (Uninterruptable Power Supply (UPS), serial-to-ethernet)
-- Stage 2: 6 months learning about the environment (looking for assets and found 700 Windos PCs).
+- Firmware attacks (Uninterruptable Power Supply (UPS), serial-to-ethernet)
+- Stage 2: 6 months learning about the environment (looking for assets and found 700 Windows PCs).
 - The attackers effectively became remote operators.
 - After 6 months (dwell time) the attackers started to disconnect power and uploaded malware to serial-to-ethernet devices.
 - Not a scalable attack.
@@ -66,12 +66,12 @@
 - Much more complex than Blackenergy
 - CRASHOVERRIDE framework used
 - Required significant pre-positioning
-- Many ICS/SCADA protocol payloads, many behaviours on both IT & OT side
-- Credential capture via Mimikatz (could be detected with a signature-based approach) -> Comromised user accounts & attacker created accounts
+- Many ICS/SCADA protocol payloads, many behaviors on both IT & OT side
+- Credential capture via Mimikatz (could be detected with a signature-based approach) -> Compromised user accounts & attacker created accounts
 - Used LoL (?) commands to pivot into ICS/SCADA via Windows LM/SQL
-- Spoofed ICS/SCADA ommand messages
+- Spoofed ICS/SCADA command messages
 - At transmission level
-- The attackers leraned from 2015 and made the attack scalable
+- The attackers learned from 2015 and made the attack scalable
 - Blueprint, not a targeted attack
 - Unclear why it was not more widespread
 - Infection vector (kill chain stage 1) is unknown
@@ -85,10 +85,10 @@
 - Attacker got a second chance and failed again
 - Contained Safety PLC (SPLC) / Safety Instrumented System (SIS) payloads, relied on operator placement & execution
 - Modified control logic (reprogrammed SPLC/SIS to allow unsafe conditions to persist)
-- Exploited a vulnerability (injected custom PowerPC payload exploiting a vulnerability in the device firmware to escalate privileges disabling RAM/ROM consitency checking etc.)
+- Exploited a vulnerability (injected custom PowerPC payload exploiting a vulnerability in the device firmware to escalate privileges disabling RAM/ROM consistency checking etc.)
 
 ## Problems / Challenges
-- ICS systems become more and more homogeneous -> attacks become scalable and replicatable
+- ICS systems become more and more homogeneous -> attacks become scalable and replicable
 - Companies often solely adopt IT security controls
 - Most of the attackers accessed the ICS directly from the internet
 - Wrong or out-dated documentation (architecture diagrams etc.)
@@ -98,9 +98,9 @@
 - Most of the ICS which think they are air-gapped aren't
 
 ## Countermeasures
-- We should focus more on behaviours and TTPs instead of anomalies
+- We should focus more on behaviors and TTPs instead of anomalies
 - MFA wherever possible for remote access
-- Risk based vulnerability patching
+- Risk-based vulnerability patching
 
 ## Vulnerabilities
 - 24% related to the ICS protocols, the rest is "deep" in the ICS
@@ -115,7 +115,7 @@
 - Parisite (since 2017)
 - Wassonite (since 2018)
 
-## Nationstate Threat Actors
+## Nation-state Threat Actors
 - USA
 - UK
 - China
@@ -125,7 +125,7 @@
 - Iran
 
 ## MITRE ATT&CK for ICS
-- Knowledge base of adversary tactics and technics based on intelligence-driven data
+- Knowledgebase of adversary tactics and technics based on intelligence-driven data
 - There is a mapping from activity groups to MITRE ATT&CK ICS designation number (+ common tactic)
 - Top tactics observed:
   - Persisting using compromised accounts and identity management services
@@ -133,7 +133,7 @@
   - Multiple specialized (international) threat actor teams which work together
 - Most dangerous tactics:
   - Safety system compromise
-  - Engineering destructive events triggered during recovery process
+  - Engineering destructive events triggered during the recovery process
   - Increased use of ransomware
   - OSINT collection and analysis of regulatory information release
 
