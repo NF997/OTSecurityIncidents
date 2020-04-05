@@ -11,3 +11,11 @@
 - [ ] CyberX Global IoT/ICS Risk Report
   - [ ] 2020
 - [ ] SANS ICS Library: https://ics.sans.org/ics-library
+
+## Articles
+- https://www.wired.com/story/notpetya-cyberattack-ukraine-russia-code-crashed-the-world/
+- https://www.npr.org/2019/09/26/763545811/how-the-u-s-hacked-isis
+
+## Standards & Recommendations
+- [ ] NIST CTF
+- [ ] Gartner's Adaptive Security Architecture

@@ -2,9 +2,13 @@
 
 - Timeframe: 2017 in Saudi Arabia
 - A lot of information about this incident is incorrect
-- Petrochemical plant
+- Petrochemical plant operated by Saudi Aramco and Sumitomo Chemical
 - Attack was designed to kill people
 - Attacker got a second chance and failed again
+- Attacker was in the network for years and were only discovered due to a bug in their code which led to a shut down of the plant for one week
+- Attacker used RDP to pivot from the IT network to the OT network
+- Attacker inserted a remote access trojan (RAT) into the safety controllers using standard PLC programming functions
 - Contained Safety PLC (SPLC) / Safety Instrumented System (SIS) payloads, relied on operator placement & execution
 - Modified control logic (reprogrammed SPLC/SIS to allow unsafe conditions to persist)
 - Exploited a vulnerability (injected custom PowerPC payload exploiting a vulnerability in the device firmware to escalate privileges disabling RAM/ROM consistency checking etc.)
+- Possible prevention?
