@@ -3,3 +3,5 @@
 /Report/*.fls
 /Report/*.log
 /Report/*.synctex.gz
+/Report/*.bbl
+/Report/*.blg
