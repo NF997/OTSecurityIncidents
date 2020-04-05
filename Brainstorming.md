@@ -144,6 +144,9 @@
 - [ ] Evolution of ICS Attacks and the Prospects for Future Disruptive Events
 - [ ] Hacking Chemical Plants for Competition and Extortion
 - [ ] Dragos ICS Vulnerabilities / Threat Landscape / Front-Line Lessons Learned
+  - [ ] 2019
+  - [ ] 2018
+  - [ ] 2017
 - [ ] SANS ICS Library: https://ics.sans.org/ics-library
 
 ## Certifications
