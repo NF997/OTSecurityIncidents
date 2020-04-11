@@ -1,18 +1,21 @@
 # Open Questions
 
-- Was does "M2M" mean ("M2M-aware threat analytics")?
-- What exactly is a SPAN port?
-- What is the Modbus protocol used for?
-- What is the Siemens S7 protocol used for?
-- What is the GE SRTP protocol used for?
-- What is the OPC protocol used for?
-- What is the BACnet protocol used for?
+- What is SCADA? Supervisory Control And Data Acquisition
+- Was does "M2M" mean ("M2M-aware threat analytics")? Probably machine to machine
+- What is a network TAP? A Test Access Point; a dedicated hardware tool that allows you to access and monitor your network
+- What is a SPAN port? A Switch Port Analyzer; also known as port mirroring; it sends a copy of all network packets seen on one port (or an entire VLAN) to another port, where the packets can be analyzed
+- What is the Modbus protocol used for? It is a serial communications protocol originally published by Modicon (now Schneider Electric) in 1979 for use with its programmable logic controllers (PLCs). Modbus has become a de facto standard communication protocol and is now a commonly available means of connecting industrial electronic devices. Modbus is popular in industrial environments because it is openly published and royalty-free (no license fees). It was developed for industrial applications, is relatively easy to deploy and maintain compared to other standards, and places few restrictions other than the size on the format of the data to be transmitted.
+- What is the Siemens S7 protocol used for? S7comm (S7 Communication) is a Siemens proprietary protocol that runs between programmable logic controllers (PLCs) of the Siemens S7-300/400 family. It is used for PLC programming, exchanging data between PLCs, accessing PLC data from systems and diagnostic purposes.
+- What is the GE SRTP protocol used for? It is developed by General Electric Intelligent Platforms (earlier GE Fanuc) for transfer of data from programmable logic controllers. The protocol is used over Ethernet almost all GE automation equipment supports the GE-SRTP protocol when equipped with an Ethernet port.
+- What is the OPC protocol used for? Open Platform Communications is a series of standards and specifications for industrial telecommunication. OPC specifies the communication of real-time plant data between control devices from different manufacturers.
+- What is the BACnet protocol used for? It is a communication protocol for Building Automation and Control (BAC) networks. BACnet was designed to allow communication of building automation and control systems for applications such as heating, ventilating, and air-conditioning control (HVAC), lighting control, access control, and fire detection systems and their associated equipment. The BACnet protocol provides mechanisms for computerized building automation devices to exchange information, regardless of the particular building service they perform.
 - How to include Stuxnet into the overview?
 - How to include WannaCry into the overview?
 - How to include NotPetya into the overview?
 - How to include Conficker into the overview?
 - How to include LockerGoga into the overview?
-- What is behavioral anomaly detection (BAD)?
-- What is SNMP v3?
-- What is VNC?
-- What is "agentless" monitoring?
+- What is behavioral anomaly detection (BAD)? BAD is a complementary technology to systems that detect security threats based on packet signatures.
+- What is SNMP v3? Simple Network Management Protocol is an Internet Standard protocol for collecting and organizing information about managed devices on IP networks and for modifying that information to change device behavior.
+- What is VNC? Virtual Network Computing is a graphical desktop-sharing system that uses the Remote Frame Buffer protocol (RFB) to remotely control another computer.
+- What is "agentless" monitoring? No extra software is installed on the devices which should be monitored.
+- What is TTP? Tactics, Techniques and Procedures
