@@ -9,7 +9,6 @@
 - What is the GE SRTP protocol used for? It is developed by General Electric Intelligent Platforms (earlier GE Fanuc) for transfer of data from programmable logic controllers. The protocol is used over Ethernet almost all GE automation equipment supports the GE-SRTP protocol when equipped with an Ethernet port.
 - What is the OPC protocol used for? Open Platform Communications is a series of standards and specifications for industrial telecommunication. OPC specifies the communication of real-time plant data between control devices from different manufacturers.
 - What is the BACnet protocol used for? It is a communication protocol for Building Automation and Control (BAC) networks. BACnet was designed to allow communication of building automation and control systems for applications such as heating, ventilating, and air-conditioning control (HVAC), lighting control, access control, and fire detection systems and their associated equipment. The BACnet protocol provides mechanisms for computerized building automation devices to exchange information, regardless of the particular building service they perform.
-- How to include NotPetya into the overview?
 - How to include Conficker into the overview?
 - How to include LockerGoga into the overview?
 - What is behavioral anomaly detection (BAD)? BAD is a complementary technology to systems that detect security threats based on packet signatures.
