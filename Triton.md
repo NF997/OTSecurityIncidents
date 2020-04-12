@@ -11,4 +11,12 @@
 - Contained Safety PLC (SPLC) / Safety Instrumented System (SIS) payloads, relied on operator placement & execution
 - Modified control logic (reprogrammed SPLC/SIS to allow unsafe conditions to persist)
 - Exploited a vulnerability (injected custom PowerPC payload exploiting a vulnerability in the device firmware to escalate privileges disabling RAM/ROM consistency checking etc.)
-- Possible prevention: Asset Inventory, Vulnerability Management Software, Incident Detection System, Threat Hunting
+- Possible prevention:
+  - Asset Inventory
+  - Vulnerability Management Software
+  - Anomaly/Incident Detection System
+  - Threat Hunting
+  - Security Awareness
+  - Firewalls
+  - Patching (hard)
+  - Network Segmentation (hard)
