@@ -5,3 +5,4 @@
 /Report/*.synctex.gz
 /Report/*.bbl
 /Report/*.blg
+/Report/*.out
