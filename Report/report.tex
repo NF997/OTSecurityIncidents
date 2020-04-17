@@ -60,7 +60,7 @@ Probably the most important subcategory of OT, at least revenue-wise, are Indust
 They are used in a wide variety of industries such as food and agriculture, energy, water, transportation, chemical, nuclear power, pharmaceutical and discrete manufacturing \cite{stouffer.2011}.\\
 % OT Security <-> IT Security: very recent trend, first incidents
 Initially, ICS were not connected to the internet and strictly separated from IT networks.
-Due to this isolation, it was hard for adversaries to remotely attack ICS which is why until recently security was not a big concern to companies running ICS.
+Due to this isolation, it was hard if not impossible for adversaries to remotely attack ICS which is why until recently security was not a big concern to companies running ICS.
 Instead, they traditionally focus on safety, continuity and efficiency of their systems.
 However, the attack surface of many ICS changed within the last two decades since they got connected to traditional IT networks and the internet---sometimes intentionally, sometimes by mistake.
 Inevitably, this led to an ongoing series of ICS security incidents.\\
@@ -68,12 +68,12 @@ Inevitably, this led to an ongoing series of ICS security incidents.\\
 While more and more of those incidents are reported, it is business-critical to develop suitable detection and mitigation strategies.
 A solid baseline in this process is analyzing and learning from past incidents.
 This is crucial to avoid common mistakes and to effectively prevent future incidents.
-To aid this process, this paper proposes a systematic comparative overview of historic ICS security incidents focussing on various parameters including targets, threat actors, attack techniques, goals and impacts, dwell times and reactions and detection and mitigation strategies.
+To aid this process, this paper proposes a systematic comparative overview of historic ICS security incidents focussing on various parameters including targets, threat actors, attack techniques, goals and impacts, dwell times, operator reactions and detection and mitigation strategies.
 % Benefits of an overview: Helps to identify patterns and to prevent future incidents (?)
 The overview aims at identifying common attack patterns that could be used to prevent future attacks.
-To the best of the author's knowledge, such an overview was not yet published.\\
+To the best of the author's knowledge, such an overview has not yet been published.\\
 % Triton
-In addition, the Triton incident of 2017 will be analyzed in detail to showcase how attackers perform sophisticated ICS attacks and which detection and mitigation strategies can be derived from this process.
+In addition, the Triton incident of 2017 will be analyzed in detail to showcase how attackers perform sophisticated ICS attacks and which detection and mitigation strategies can be derived from their methodologies.
 The incident was chosen due to its potential life-threatening impact and the novel attack approach targeting Safety Instrumented Systems (SIS).\\
 % Outline
 The remainder of the paper is structured as follows.
@@ -82,9 +82,23 @@ Exemplary the Triton incident is analyzed in detail in Section 4.
 Section 5 concludes the paper by emphasizing the need to learn from past mistakes.
 \section{Related Work}
 % In this section, you provide an overview of papers written by other scientists that have covered a problem similar to yours. You can find related work in web search engines and scientific literature databases. Some of the most prominent ones in the field of computer science are: Google Scholar, Scopus, ACM Digital Library, IEEE Xplore, Lecture Notes in Computer Science.
-% Enumerations: RISI Database, ICS-CERT / CISA (https://www.us-cert.gov/ncas/alerts/2020) Alerts from the US Government,
-% Reports from Companies in the field: Dragons Threat Report, CyberX Global IoT/ICS Risk Report,...
+There are four main types of publicly available sources that provide information on ICS security incidents.
+% Enumerations: RISI Database, ICS-CERT Alerts from the US Government,
+First, there are incident enumerations like the Risi Database\footnote{https://www.risidata.com/Database} and the ICS-CERT Alerts\footnote{https://www.us-cert.gov/ics/alerts}.
+On the one hand, the fact that those repositories aim to aggregate all observed ICS incidents from around the world makes them useful for getting a high-level overview of the current threat landscape.
+On the other hand, however, they only provide basic information about the incidents and do not analyze them in detail.
+% Reports from Companies in the field: Dragos Threat Report, CyberX Global IoT/ICS Risk Report,...
+Second, ICS security companies like Dragos \cite{dragos.19} and CyberX \cite{cyberx.19} publish yearly ICS threat reports discussing relevant incidents.
+Those reports are neither complete with regards to the incidents they cover nor do they provide in-depth analyses of the covered attacks.
+However, they do a good job of highlighting trends in the threat landscape throughout the years.
+Third, there are dedicated scientific papers focussing on single ICS incidents like the attacks targeting the Ukraine power grid \cite{eisac.16} or the Triton malware \cite{pinto.18}. Those papers usually cover single incidents in-depth and help in understanding how exactly the adversaries operated.
+Fourth, there are numerous blog posts, press releases and conference talks covering ICS incidents.
+In addition, there is already a paper proposing an overview of historical ICS security incidents \cite{hemsley.18}.
+However, the paper is slightly dated and, more importantly, does not compare the different incidents systematically.
+All of the above-mentioned sources are taken into account to achieve exactly this in the upcoming section.
+
 % Other papers covering the big incidents: Ukraine, Triton,...
+% IT incidents overview
 \section{Comparative Overview of ICS Security Incidents}
 \subsection{Targets}
 % Country, Target, Sector, System Type
