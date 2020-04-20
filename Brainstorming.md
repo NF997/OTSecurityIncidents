@@ -2,7 +2,7 @@
 
 ## Definitions
 - OT: Voting machines, (I)IoT, [?] + ICS
-- ICS (as defined by NIST): [?] + SCADA 
+- ICS (as defined by NIST): [?] + SCADA
 
 ## Important People & Companies
 - Michael Assante (+)
