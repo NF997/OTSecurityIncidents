@@ -23,9 +23,9 @@ Industroyer/CRASHOVERRIDE,12/2016,>= several months,Ukraine,Power Grid,Energy,EL
 Op Ghoul,2016,?,Middle East,Industrial Organizations,?,?,?,Spearphishing,
 WannaCry,05/2017-(?),Multiple,Untargeted,Multiple,?,Multiple (also non-OT),Self-replicating ransomware using EternalBlue (SMB zero day developed by the NSA and disclosed by another hacker group),Yes,Ransom payment,Yes,Monetary damage,After infection,?,?,
 NotPetya,07/2017-?,?,Ukraine + other,Multiple,Multiple,Probably Russia,Multiple (also non-OT),Self-replicating wiperware using EternalBlue & Mimikatz,Yes,Create chaos,Yes,Monetary damage >9.000.000.000€,After infection,?,
+BitPaymer,07/2017-?,?,?,?,?,?,?,Ransomware / Banking Trojan / Non-Self-Propagating
 Dragonfly 2.0,10/2017,?,?,Multiple,Energy,RIS aka GRIZZLEY STEPPE aka Dragonfly aka Energetic Bear,?,?,?,?,Yes,Compromised a number of ICS equip- ment vendors, infecting their software with a RAT,?,?,
 Triton/Trisis/Hatman,2017,>= several months,Saudi Arabia,Petrochemical plant,Chemical (/Energy?),Probably Russia,ICS (SCADA?),SIS Tampering: Contained Safety PLC (SPLC) / Safety Instrumented System (SIS) payloads / relied on operator placement & execution / Modified control logic (reprogrammed SPLC/SIS to allow unsafe conditions to persist) / Exploited a vulnerability (injected custom PowerPC payload exploiting a vulnerability in the device firmware to escalate privileges disabling RAM/ROM consistency checking etc.),No,Kill people (?),No,Plant temporarily shut down,medium (at the attack phase),Shutdown of the plant,
 Shamoon3,2018,?,?,Southeast Europe & Middle East,Energy / Communications / Gov,?,?,Wiperware
 LockerGoga,01/2019-?,?,Norway / America + others,Aluminum producer Norsk Hydro's Production Line in 03/2019 / American chemical companies (+others),Critical Manufacturing + others,?,?,Non-self replicating ransomware,?,Get ransom payment,?,300M NOK,late (at the consequence phase),?,
-BitPaymer,2019,?,?,?,?,?,?,Ransomware
 Maze/ChaCha,05/2019-?,?,Multiple,Multiple (untargeted),Multiple,?,Multiple (mainly non-OT),Ransomware
