@@ -4,11 +4,11 @@ Stuxnet,2010,?,Iran,Nuklear facilities,Nuklear Power,US Gov / Israel Gov / Briti
 Conficker,11/2008-?,?,Multiple (+200),Untargeted,Multiple,?,Multiple (also non-OT),?,Yes,?,Yes,?,?,?,
 Operation Aurora,2010-2018,?,?,20+ High Tech Security & Defense Companies,IT,?,APT
 NightDragon,11/2010-?,?,Global,Multiple (targeted),Energy / Oil / Petrochemical,Probably China,Multiple (also non-OT),Social engineering / Spearphishing / Exploitation of Windows and AAD vulnerabilities / RATs,?,Information gathering,Yes,harvesting sensitive competitive proprietary operations and project-financing information about oil and gas field bids and operations,?,?,A set of TTPs
-DUQU,2011,?,?,?,?,?,ICS,Worm for Information Gathering and Stealing,
+Duqu,2011,?,?,?,?,?,ICS,Worm using a stolen digital certificate,?,Information Gathering and Stealing,?,?,?,?,Duqu bears a striking similarity to Stuxnet in terms of design philosophy / internal structure and mechanisms / implementation details and the estimated amount of effort needed to create it
 Shamoon,2012,?,?,?,Energy,Chrysene,?,Wiperware,
 Stonedrill,?,?,?,?,?,Chrysene,
-Flame,2012,?,Middle East,?,?,?,?,Espionage Virus,
-Gauss,2012,?,?,?,?,?,?,Information Stealer Malware,
+Flame/Skywiper,2012,?,Middle East,?,?,?,?,Espionage Virus using the same framework as Duqu and using microphones / web cameras / key stroke logging / extraction of geolocation data from images,
+Gauss,2012,?,?,?,?,?,?,Information Stealer Malware using the same framework as Duqu,
 Red October,2013,?,?,?,Gov / Research,?,?,?,Espionage Malware,
 Havex,2014,?,?,?,?,?,ICS,Remote Access Trojan Information Stealer,
 Heartbleed,2014,?,?,?,?,?,?,Security Bug & Vulnerability Exploited by Attackers,
