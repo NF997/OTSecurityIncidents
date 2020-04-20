@@ -14,9 +14,9 @@
 - Possible prevention:
   - Asset Inventory
   - Vulnerability Management Software
-  - Anomaly/Incident Detection System
+  - Anomaly/Incident Detection System (based on TTPs and behaviours, not only IOCs)
   - Threat Hunting
   - Security Awareness
   - Firewalls
   - Patching (hard)
-  - Network Segmentation (hard)
+  - Network Segmentation (hard, but choke-points usually in place by default)
