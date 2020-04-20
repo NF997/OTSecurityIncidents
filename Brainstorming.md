@@ -139,3 +139,6 @@
 
 ## Certifications
 - [GRID Certification](https://www.giac.org/certification/response-industrial-defense-grid)
+
+## Misc Thoughts
+- The time from initial compromise to the actual ransomware attack -- known as a "dwell time" -- is, on average, three days, according to FireEye. (https://www.zdnet.com/article/most-ransomware-attacks-take-place-during-the-night-or-the-weekend/)
