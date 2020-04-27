@@ -100,8 +100,9 @@ All of the above-mentioned sources are taken into account to achieve exactly thi
 % Other papers covering the big incidents: Ukraine, Triton,...
 % IT incidents overview
 \section{Comparative Overview of ICS Security Incidents}
-From the resources and literature stated in Section 2, a total of 30 ICS security incidents were extracted.
+From the resources and literature stated in Section 2, a total of 29 ICS security incidents were extracted.
 Those form the basis of the following analysis and can be found in table [appendix table].
+Note that this table is inherently incomplete, but rather tries to focus on the most prevalent attacks.
 In the subsections below, a comparative overview of these incidents will be given.
 Each subsection tries to compare the incidents with regards to specific attributes, e.g. the involved threat actors or the utilized attack techniques.
 Most subsections contain both quantitative as well as qualitative analyses.
@@ -113,11 +114,29 @@ In general, however, this is a non-trivial task and even if performed successful
 
 \subsection{Targets}
 % Targeted vs. Untargeted
+When analyzing the entities affected by ICS security incidents there are two fundamentally different kinds of attacks to be considered.
+On the one hand, there are targeted attacks utilized to breach specific entities.
+Making up roughly 86\% of the analyzed incidents, targeted attacks seem to be present a very diverse threat landscape to ICS and will therefore be analyzed in detail below.
+On the other hand, there are untargeted attacks.
+While only a few of the analyzed incidents fall in this category, they still pose a significant threat to ICS.
+Interesting to see is that the malware used for untargeted attacks usually is not tailored specifically for ICS environments, but rather targets common operating systems like Microsoft Windows in general.
+Many instances of untargeted attacks fall in the category of ransomware.
+For example, the popular WannaCry ransomware spread not only to desktop computers but also infected a series of ICS workstations which lead to outages due to encrypted hard drives (?) [citation].\\
 % Untargeted
+Since untargeted attacks are not aimed at specific entities there is no pattern observable in terms of the geographical location or the economic sector of the affected parties.
+Targeted attacks, however, can be analyzed for such patterns.\\
 % Country
-% Sector
-% System Type
-% Company size
+When it comes to the geographical location of ICS attack victims, the most targeted areas seem to be the Middle East and Europe. The Middle East is being targeted by about 56\% of the analyzed attacks. Especially companies located in Saudi Arabia often fall victim to attacks. Probably the most well-known incident taking place there was Triton which targeted a Saudi Arabian petrochemical plant and will be covered in depth in Section 4.
+Companies located in Europe are targeted by about 52\% of the analyzed attacks. The country affected the most until now is Ukraine falling victim to multiple attacks targeting its power grid.
+In about 24\% of the analyzed incidents, the US were amongst the victims.
+Interesting is that while being home to important global threat actors, neither Russia nor China reports a lot of ICS attacks.
+However, this does not necessarily mean that no attacks against these countries are taking place, but it could also be the case that incidents are just not as liberally published as by other countries.
+Especially China is known for withholding most of the cyber attacks taking place in their country [citation].\\
+% Sector (+ private/public)
+When it comes to the economic sector falling victim to targeted ICS attacks, the most affected one is the energy sector being targeted in about 52\% of the analyzed targeted attacks.
+Most and foremost, those operations include attacks against power grids like the attacks taking place in 2014 and 2015 in Ukraine.
+Other examples of targeted entities within the energy sector include oil and gas pipelines and refineries.
+The remaining victims of ICS attacks are spread across a wide variety of other economic sectors including manufacturing, water, petrochemical, governmental organizations and transportation.
 
 \subsection{Threat Actors}
 \subsection{Attack Techniques}
