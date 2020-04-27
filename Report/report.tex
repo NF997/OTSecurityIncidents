@@ -7,6 +7,7 @@
 \usepackage{graphicx}
 % Used for displaying a sample figure. If possible, figure files should
 % be included in EPS format.
+\usepackage{color}
 \usepackage{hyperref}
 % If you use the hyperref package, please uncomment the following line
 % to display URLs in blue roman font according to Springer's eBook style:
@@ -114,24 +115,25 @@ In general, however, this is a non-trivial task and even if performed successful
 
 \subsection{Targets}
 % Targeted vs. Untargeted
-When analyzing the entities affected by ICS security incidents there are two fundamentally different kinds of attacks to be considered.
+When analyzing the entities affected by ICS security incidents there are two fundamentally different kinds of attacks taht have to be considered separately.
 On the one hand, there are targeted attacks utilized to breach specific entities.
-Making up roughly 86\% of the analyzed incidents, targeted attacks seem to be present a very diverse threat landscape to ICS and will therefore be analyzed in detail below.
+Making up roughly 86\% of the analyzed incidents, targeted attacks seem to present a diverse threat landscape to ICS and will therefore be analyzed in detail below.
 On the other hand, there are untargeted attacks.
-While only a few of the analyzed incidents fall in this category, they still pose a significant threat to ICS.
-Interesting to see is that the malware used for untargeted attacks usually is not tailored specifically for ICS environments, but rather targets common operating systems like Microsoft Windows in general.
+While only four of the analyzed incidents fall into this category, they still pose a significant threat to ICS.
+Interesting to see is that the malware used for untargeted attacks usually is not tailored specifically for ICS environments, but rather targets common operating systems like Microsoft Windows and enterprise networks in general.
 Many instances of untargeted attacks fall in the category of ransomware.
-For example, the popular WannaCry ransomware spread not only to desktop computers but also infected a series of ICS workstations which lead to outages due to encrypted hard drives (?) [citation].\\
+For example, the popular WannaCry ransomware spread not only to desktop computers around the world but also infected a series of ICS workstations e.g. at a Taiwanese manufacturing plant leading to outages due to encrypted hard drives \cite{skybox.18}.
+This kind of incidental infections of ICS systems with malware originally intended for enterprise networks are becoming more and more of a threat in recent years \cite{dragos.19}, \cite{cyberx.19}, \cite{zimba.18}.\\
 % Untargeted
-Since untargeted attacks are not aimed at specific entities there is no pattern observable in terms of the geographical location or the economic sector of the affected parties.
+Since untargeted attacks are not aimed at specific entities but often solely intend to infect as many systems as possible, e.g. with self-replicating components, there is in general no pattern observable in terms of the geographical location or the economic sector of the affected parties.
 Targeted attacks, however, can be analyzed for such patterns.\\
 % Country
-When it comes to the geographical location of ICS attack victims, the most targeted areas seem to be the Middle East and Europe. The Middle East is being targeted by about 56\% of the analyzed attacks. Especially companies located in Saudi Arabia often fall victim to attacks. Probably the most well-known incident taking place there was Triton which targeted a Saudi Arabian petrochemical plant and will be covered in depth in Section 4.
+When it comes to the geographical location of ICS attack victims, the areas most often affected seem to be the Middle East and Europe. The Middle East is being targeted by about 56\% of the analyzed attacks. Especially companies located in Saudi Arabia often fall victim to attacks. Probably the most well-known incident taking place there was Triton which targeted a Saudi Arabian petrochemical plant and will be covered in depth in Section 4.
 Companies located in Europe are targeted by about 52\% of the analyzed attacks. The country affected the most until now is Ukraine falling victim to multiple attacks targeting its power grid.
 In about 24\% of the analyzed incidents, the US were amongst the victims.
-Interesting is that while being home to important global threat actors, neither Russia nor China reports a lot of ICS attacks.
-However, this does not necessarily mean that no attacks against these countries are taking place, but it could also be the case that incidents are just not as liberally published as by other countries.
-Especially China is known for withholding most of the cyber attacks taking place in their country [citation].\\
+Interesting is that while being home to important global threat actors as discussed in Subsection 3.2, neither Russia nor China nor North Korea reports a lot of ICS incidents against entities located in their countries.
+However, this does not necessarily mean that no ICS incidents occur in these countries, but it could also be the case that incidents are just not as liberally published as by other countries.
+Especially China and North Korea are known for withholding most of the cyber attacks taking place in their country [citation].\\
 % Sector (+ private/public)
 When it comes to the economic sector falling victim to targeted ICS attacks, the most affected one is the energy sector being targeted in about 52\% of the analyzed targeted attacks.
 Most and foremost, those operations include attacks against power grids like the attacks taking place in 2014 and 2015 in Ukraine.
@@ -155,7 +157,7 @@ The remaining victims of ICS attacks are spread across a wide variety of other e
 % Learn from past mistakes
 % Future Work
 
-
+\newpage
 %
 % ---- Bibliography ----
 %
