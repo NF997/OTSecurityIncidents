@@ -1,0 +1,24 @@
+Threat Actor,Country,Sponsor,# Attacks
+?,?,4
+?,China,State,2
+?,Iran,State,1
+? (Gov),US,State,1
+? (Gov),UK,State,1
+? (Gov),Israel,State,1
+? (“hacktivist” group with ties to Syria),Syria,No?,1
+APT33,Iran,State,3
+APT34,Iran,State,2
+APT35,Iran,State,1
+Elderwood, China,?,1
+Duqu,?,1
+Energetic Bear,Russia,State,4
+TeleBots,Russia,State,1
+TEMP.Veles,Russia,State,1
+Turla,Russia,State,1
+Inception Framework,Russia,?,1
+Criminal Individuals,Ukraine,No,1
+FIN6,?,1
+Vitak Boden (Individual),?,No,1
+Indirk Spider,?,1
+Lazarus Group, North Korea,State,1
+Op Ghoul,?,1
