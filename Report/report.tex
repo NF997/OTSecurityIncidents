@@ -179,6 +179,44 @@ On the other hand, governments can profit in various ways from ICS attacks again
 Often ICS attacks can be seen as an act of war. % Citations and further research.
 
 \subsection{Attack Techniques}
+% ICS cyber kill chain
+An established model to characterize ICS attacks is the ICS Cyber Kill Chain developed by the SANS institute and depicted in figure \ref{fig:CyberKillChain}.
+It is comprised of two stages.
+In stage one, IT intrusion preparation and execution takes places, i.e. the attacker compromises the IT network and positions herself in the ICS network.
+This stage can be completed without specific knowledge about ICS technologies or protocols.
+In stage two, ICS attack development and execution are performed, e.g. an attack targetting certain actuators---for example, water pumps---is developed, tested, and executed.\\
+% Stage 1: Intrusion
+When it comes to the initial access in stage one of the ICS Cyber Kill Chain, two attack techniques seem to be most popular among the analyzed incidents.
+The first one is spearphishing which was reportedly performed in at least 26\% of the attacks.
+The second one are zero day exploits which were utilized in at least 11\% of the attacks.
+When inside the victims IT network, attackers often use common software.
+For example, in at least 11\% of the cases Mimikatz was used for credential capturing.
+Often, popular exploitation frameworks like Metasploit and Cobalt Strike are used, too.
+More recent trends are the use of sophisticated obfuscation and evasion techniques and \textit{living off the land} tools---like PowerShell or PsExec---in order to avoid being detected by IDS.\\
+% Untargeted Attacks
+Since the core of untargeted attacks is usually ransom- or wiperware, they do not go beyond stage one of the ICS Cyber Kill Chain.
+% Targeted Attacks
+Targeted attacks, however, aim more and more often to exploit the ICS environment, which requires the attackers to first gain access to the ICS network.
+One possible way to pivot is lateral movement via Windows authentication services.
+% Stage 2: ICS Attack
+Once in the ICS network, a multitude of different exploit strategies has been reported.
+Most adversaries attack ICS components like Programmable Logic Controllers (PLCs) or Safety Instrumented Systems (SIS) to modify their behaviour or to make them fail altogether.
+Doing so, they are often able to control actuators like waterpumps, fake the values of sensors or turn off the power supply.
+To make disaster recovery harder, attackers often wipe Human-Machine Interfaces (HMIs), too.
+% Special Case: Target Store's HVAC
+While according to the ICS Cyber Kill Chain stage one typically has to take place before stage two, there is an example where the attack was performed the other way around.
+In 2013, an unknown attacker stole login credentials of a third-party heating, ventilation, and air conditioning (HVAC) contractor of US Target Stores.
+From the ICS network she then pivoted into the IT network in order to install credit card stealing software. \cite{hemsley.18}\\
+% Scalability of the attack: Trend goes to scalable frameworks?
+One important trend in addition to the techniques described above is the trend away from highly manual attacks specifically tailored for a single victim towards more victim-agnostic ICS attack frameworks enabling scalable attacks.
+A case in point are the attacks on the Ukraine power grid.
+The first attack in 2015 was highly manual and the effort put into it could not be directly utilized for attacks against other energy infrastructures.
+One year later, however, there was a second attack targeting the power grid, but this time the adversaries had developed a framework which in theory allows them to scale their attack to a multitude of different victims with a relatively small effort. \cite{greenberg.17}
+\begin{figure}[h]
+    \fbox{\includegraphics[width=\textwidth]{figures/ICSCyberKillChain.png}}
+    \caption{ICS Cyber Kill Chain as introduced by the SANS institute, from \cite{assante.15}.}
+    \label{fig:CyberKillChain}
+\end{figure}
 \subsection{Attack Goals and Realized Impacts}
 \subsection{Dwell Times and Reactions}
 \subsection{Detection and Mitigation Strategies}
