@@ -111,9 +111,6 @@ Each subsection tries to compare the incidents with regards to specific attribut
 % Most subsections contain both quantitative as well as qualitative statements.
 % Please keep in mind, though, that the quantitative numbers are solely intended to highlight important trends and that the according values might contains inaccuracies.
 % This is due to the fact that often specific information about incidents is unknown or not known for sure.
-% For example, consider the dwell time which describes how long an adversary is in a system before the actual attack payload is executed.
-% Sometimes it is possible to give an accurate estimation for this number thanks to digital forensics after an incident.
-% In general, however, this is a non-trivial task and even if performed successfully, it may still lead to incorrect conclusions about the dwell time and other incident attributes.
 % )
 
 \subsection{Targets}
@@ -240,10 +237,33 @@ Fortunately, until to date, there are no ICS incidents known which killed humans
 One incident considered to be unsuccessful is the well-known Triton attack which failed for reasons not fully understood up until today.
 Section 4 will provide a detailed analysis of the incident and its impacts.
 Furthermore, untargeted attacks often partly fail to achieve their goal since a lot of companies can restore operations without a long outage or paying a ransom thanks to sufficient backup strategies.
+
 \subsection{Dwell Times and Reactions}
 % Dwell times
-% Time of Discovery
+Dwell time describes how long an adversary is in a system before the actual attack payload is executed.
+While sometimes it is possible to give an accurate estimation for this number thanks to digital forensics after an incident, keep in mind that, in general, this is a non-trivial task and potentially leads to inaccuracies.
+A rough trend, however, can be detected when analyzing important ICS incidents.
+% Untargeted: often days
+In the context of untargeted attacks, the dwell time usually is a matter of days, while when speaking about targeted attacks, the dwell time typically ranges from multiple months, e.g. in the attacks targetting the Ukraine power grid and the Triton incident, to multiple years.
+The latter is considered to be the case, for example, when considering the Red October espionage campaign against multiple countries initiated by a Russian threat actor.
+% Targeted multiple months (Industroyer, Blackenergy, Triton) to multiple years (Red October)
+% Lots of time to detect the intrusion
+It seems that with dwell times this long it should be possible for the ICS network operators to detect that something is wrong within their systems before the adversaries deliver the final payload.
+% However: Time of Discovery medium BlackEnergy & Triton but most often late
+Unfortunately, while this holds true in theory, attacks usually are not detected in their early stages in practice.
+There are some cases---BlackEnergy and Triton---where the administrators were able to detect that something is wrong before the actual attack payload was executed, but most often only after the final exploit is delivered the attack is detected.\\
 % Typical Reactions (do they help?)
+% Untargeted attacks: Pay ransom (via insurance) or restore via backup (maybe buy new hard drives <-> Shamoon)
+When it comes to reacting to an untargeted attack, there is sometimes the option to pay a ransom in order to get the hard drives decrypted again by the adversary.
+While this should be avoided, since there is no certainty that the attackers will indeed decrypt the hard drives as promised, there are still cases known were the ransom was payed.
+Often companies have dedicated insurances that cover such ransom demands under certain circumstances.
+The typical response to a destructive untargeted attack, however, is to restore operations from backups.
+% Targeted attacks: When medium usually shutdown like Triton
+% When late digital forensics
+In the case of targeted attacks, when operators suspect that an intrusion has happened, they often shut down the ICS in order to prevent further breaches, physical damage, and threats to human lifes.
+This happened, e.g. in the Triton incident.
+When the final payload was already delivered by the adversaries, however, often the only thing left to do is to start recovery processes that aim to restore operations and typically also include digital forensics in order to analyze how the incident could have happened, e.g. how the ICS network could be breached, in the first place.
+% As a result of the Shamoon attack, however, thousands of hard drives were destroyed irretrievably such that the affected company had to quickly buy large amounts of hard drives, which lead to a world-wide shortage of those.
 \subsection{Detection and Mitigation Strategies}
 % Mitigation against untargeted ransom- & wiperware
 % Asset Inventory
