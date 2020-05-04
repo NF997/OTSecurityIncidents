@@ -190,7 +190,7 @@ The second one are zero day exploits which were utilized in at least 11\% of the
 When inside the victims IT network, attackers often use common software.
 For example, in at least 11\% of the cases Mimikatz was used for credential capturing.
 Often, popular exploitation frameworks like Metasploit and Cobalt Strike are used, too.
-More recent trends are the use of sophisticated obfuscation and evasion techniques and \textit{living off the land} tools---like PowerShell or PsExec---in order to avoid being detected by IDS.\\
+More recent trends are the use of sophisticated obfuscation and evasion techniques and \textit{living off the land} tools---like PowerShell or PsExec---in order to avoid being detected by Intrusion Detection Systems (IDS).\\
 % Untargeted Attacks
 Since the core of untargeted attacks is usually ransom- or wiperware, they do not go beyond stage one of the ICS Cyber Kill Chain.
 % Targeted Attacks
@@ -264,16 +264,35 @@ In the case of targeted attacks, when operators suspect that an intrusion has ha
 This happened, e.g. in the Triton incident.
 When the final payload was already delivered by the adversaries, however, often the only thing left to do is to start recovery processes that aim to restore operations and typically also include digital forensics in order to analyze how the incident could have happened, e.g. how the ICS network could be breached, in the first place.
 % As a result of the Shamoon attack, however, thousands of hard drives were destroyed irretrievably such that the affected company had to quickly buy large amounts of hard drives, which lead to a world-wide shortage of those.
+
 \subsection{Detection and Mitigation Strategies}
 % Mitigation against untargeted ransom- & wiperware
+After comparatively analyzing 28 ICS incidents a multitude of possible detection, and mitigation strategies can be identified which can be leveraged to defend ICS against future threats.\\
+% Detection
 % Asset Inventory
-% Vulnerability Management Software
+To be able to detect ongoing ICS attacks, the first fundamental resource is an up-to-date asset inventory.
+Only with that, possibly dangerous network or host activity can be detected.
 % Anomaly/Incident Detection System
+Such detection is usually offered by IDS that lookout, e.g. on network tabs or SPAN ports, for anomalies in the network traffic.
+Compared to traditional IT networks, this is a quite promising approach, since---in contrast to IT networks---the expected network traffic does not vary much such that false positives can be relatively easy tuned to a minimum.
 % Threat Hunting
+A more active approach to IDS is threat hunting.
+[...]\\
+% Mitigation
+When it comes to suitable mitigation strategies, the first line of defense to strengthen are the humans operating ICS.
 % Security Awareness
+As stated in Subsection 3.3, many adversaries use social engineering for gaining an initial foothold in the victim's network.
+The risk of successful phishing compromises can e.g. be reduced by security awareness workshops.
+% Vulnerability Management Software
+More on the technical side of things are vulnerability management solutions.
+In ICS environments, it is often not that easy to patch hosts, since this could mean downtime and therefore revenue loss.
+However, it is crucial to at least know which hosts have known vulnerabilities.
+Even if a patch might not be possible, one could e.g. at least harden the network segmentation around the vulnerable hosts to make a compromise less likely.
 % Firewalls
-% Patching (hard)
-% Network Segmentation (hard)
+Inspired by traditional IT networks, firewalls are becoming more and more popular in ICS environments, too.
+They are especially critical in overlapping parts of the IT and ICS networks.
+% Backups
+Last but not least, it is essential to have a solid backup strategy which allows for restoring operations fast and reliable, e.g. in the case of a ransom- or wiperware attack.
 
 \section{Detailed Analysis of the Triton Attack}
 \subsection{The Attackers' Approach}
