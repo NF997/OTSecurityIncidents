@@ -219,15 +219,35 @@ One year later, however, there was a second attack targeting the power grid, but
 \end{figure}
 \subsection{Attack Goals and Realized Impacts}
 % Common goals
+The most common goal of adversaries is to extract data from the victim's systems. 37\% of all analyzed attacks were designed to achieve exactly this.
+Other goals often persued by attackers are to cause disruption (22\%), to provoke a ransom payment (15\%), and to cause physical damage (11\%).\\
 % Underlying motivations (state actors)
+When it comes to the underlying motivations of attackers, three distinct ones seem to dominate.
+First, attackers often strive for monetary gain.
+This motivates ransomware attacks like WannaCry or LockerGoga as well as information stealing with the goal of selling the data to the highest bidder.
+Second, some adversaries are interested in the data they steal themselfs and do not intend to sell them.
+This motivates ICS espionage operations like StoneDrill were Iranian threat groups gathered intelligence about Saudi Arabian ICS environments.
+Third, there are threat actors which intend to disrupt the regular operation of ICS by causing outages or even physical damage.
+The latter was e.g. the case in the famous Stuxnet incident in 2010 were the US and Israelian government attacked nuklear enrichment facilities of Iran in order to sabotage the possible development of nuklear weapons.
+Untargeted attacks falling into this category are typically related to wiperware which erases or encrypts hard drives without a subsequent ransom demand.\\
 % How often were they successful
+In total, a minimum of 67\% of the attacks are known to be at least partly successful.
 % Impacts, when successful
+Typical impacts include information loss, financial loss---via physical damage, ransom payment or costly recovery processes---and environmental damages.
+Fortunately, until to date, there are no ICS incidents known which killed humans.\\
 % If not successful, why?
+The incidents which are considered to be unsuccessful include two well-known attacks.
+First, there is Triton which failed for reasons not fully understood up until today.
+Section 4 will provide a detailed analysis of the incident and its impacts.
+Second, LockerGoga is a ransomware targeting also ICS environments.
+In 2019, the production line of a Norwegian aluminium producer was hit by the attackers, the majority of hard drives were encrypted and a ransom payment was demanded.
+Due to existing backups that could be used to restore normal operations, a ransom payment could be avoided, however.
 \subsection{Dwell Times and Reactions}
 % Dwell times
 % Time of Discovery
 % Typical Reactions (do they help?)
 \subsection{Detection and Mitigation Strategies}
+% Mitigation against untargeted ransom- & wiperware
 % Asset Inventory
 % Vulnerability Management Software
 % Anomaly/Incident Detection System
