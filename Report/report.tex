@@ -299,9 +299,48 @@ While the previous section conducted a comparative overview of the most prevalen
 Exemplary, the Triton attack targetting a Saudi Arabian petrochemical plant in 2017 is analyzed.
 The incident---also known as Trisis \cite{dragos.17} and HatMan\footnote{https://www.us-cert.gov/ics/MAR-17-352-01-HatMan—Safety-System-Targeted-Malware}---is chosen as an example for several reasons.
 First and foremost it was the first attack targetting SIS and therefore potentially threatening human lives.
-Additionally, the attack was highly sophisticated and even if it was eventually detected by the plant operators, they were not able to stop it immediately.
+Additionally, the attack was highly sophisticated and even when it was eventually detected by the plant operators, they were not able to stop it immediately.
+For these reasons, Triton is considered to be of significant importance to the ICS community \cite{dragos.17}.
 % Outline?
-\subsection{The Attackers' Approach}
+\subsection{Attack and Response Strategies}
+% Stage 1
+As described in Subsection 3.3, an ICS attack usually is comprised of the two stages of the ICS Cyber Kill Chain.
+When it comes to Triton, the details of stage one are still unclear.
+It is not unambigously known, how the IT network of the Petro Rabigh oil refinery got breached in the first place and how the attackers moved from there into the ICS network.
+It is suspected, however, that the initial access happened via a spearphishing attack. [citation]\\
+% Stage 2: Triton malware
+Stage two of the ICS Cyber Kill Chain is mainly performed by a malware focussed on ICS effects which is nowadays known as Triton.
+The attackers managed to install this malware on the Triconex SIS from Schneider Electric---therefore the name Triton or Trisis.
+% Background: SIS
+SIS are an integral part of ICS in that their sole purpose is to maintain safe operations should failures of other hard- or software occur.
+They should prevent catastrophic incidents like explosions or fire \cite{pinto.18}.
+It is therefore crucial that this last line of automated safety denfense operates correctly.
+The functionality of a SIS can be broken down as follows.
+The inputs for a SIS are an array of sensors measuring physical values e.g. temparature, pressure or rotation speed.
+In real time, the SIS analyzes these values and outputs a single decision: if it is safe to continue operation.
+Should the SIS decide that there is an unsafe physical condition, suitable commands are sent to according actuators like water pumps, machine engines or valves.
+E.g. if a SIS would detect a dangerously high temparature in a gas tank, the valves regulating the gas inflow would be closed. \cite{dragos.17} \\
+% Attack method
+To protect a SIS from unintended modification, there is a physical keyswitch indication the mode of operation.
+Under normal circumstances this switch should be set to \textit{run} which disables arbitrary changes to the logic of the SIS.
+In the case of Petro Rabigh, however, the switch was set to \textit{program mode} which allows for logic changes.
+Why this was the case is not known, but it might very likely be the case that an engineer programming the SIS simply forgot to switch it back to \textit{run} mode.
+In addition to these modes of operation,network connectivity to a SIS should in theory be extremely limited if existant at all.
+In practice, for example, plant operators sometimes want to retrieve data from SIS in order to analyze them which is why they allow for more network connectivity than needed for reasons of convenience.
+This was also the case at Petro Rabigh (?) [citation].
+\cite{dragos.17}\\
+Once the Triton malware was installed on the SIS it tried changing its internal logic.
+
+% First outage
+
+% Response
+
+% Attackers response
+
+% Second outage
+
+% Response
+
 \subsection{Goals, Impacts, and Attribution}
 % Goal unknown, potentially killing people
 As of today, the motivations behind the Triton attack remain unclear.
@@ -318,19 +357,38 @@ Whether or not the latter was indeed part of the adversaries goals is still unkn
 The reasoning about the underlying motivations together with the fact that the attack required a tremendous amount of resources suggests that the threat actor behind the attack is a nation-state \cite{kovacs.17}.
 Indeed, the attackers behind the Triton operation seem to be a Russian threat group, given the name TEMP.Veles, which is probably backed by a Russian research institute based in Moscow \cite{fireeye.18}, \cite{sobczak.19}.
 \subsection{Detection and Mitigation Opportunities}
-% Asset Inventory
-% Vulnerability Management Software
+% Stage 1
+% Detection
 % Anomaly/Incident Detection System
 % Threat Hunting
+% Mitigation
 % Security Awareness
 % Firewalls
-% Patching (hard)
-% Network Segmentation (hard)
+% Network Segmentation
+% Stage 2
+% Detection
+% Anomaly/Incident Detection System
+% Threat Hunting
+% Mitigation
+% Security Awareness
+% Firewalls
+% Network Segmentation (SIS!)
+% Physical controls should be in place so that no unauthorized person would have access to the safety controllers, peripheral safety equipment, or the safety network.
+% All controllers should reside in locked cabinets and never be left in the “Program” mode.
+% Operator stations should be configured to display an alarm whenever the Tricon key switch is in the “Program Mode.”
+% All methods of mobile data exchange with the isolated safety network such as CDs, USB drives, etc. should be scanned before use in the Tristation terminals or any node connected to this net- work.
+% Laptops that have connected to any other network besides the safety network should never be allowed to connect to the safety network without proper sanitation. Proper sanitation includes checking for changes to the system not simply running anti-virus software against it (in the case of TRISIS no major anti-virus vendor detected it at the time of its use).
+
+% \subsection{The Future of the Triton Malware}
+% A lot of systems use Scheider Electronic SIS -> widely applicable
+% The Triconex line of safety systems are leveraged in numerous industries - however, each SIS is unique and to understand process implications would require specific knowledge of the process. This means that this is not a highly scalable attack that could be easily deployed across numerous victims without significant additional work
+% Although the attack is not highly scalable, the tradecraft displayed is now available as a blueprint to other adversaries looking to target SIS and represents an escalation in the type of attacks seen to date as it is specifically designed to target the safety function of the process
+% Second Triton attack in 2018
 \section{Conclusion}
-% The conclusion summarizes the research and discusses its significance. You should also point out future research directions. The goal is to: Provide a very brief summary of the results, Provide a future perspective on the work, Avoid: repeating the abstract; repeating background information from the introduction; introducing new arguments; repeating the arguments made in the main body; failing to ad- dress all of the research questions set out in the introduction.
-% Summary
-% Learn from past mistakes
-% Future Work
+% The conclusion summarizes the research and discusses its significance. You should also point out future research directions. The goal is to: Provide a very brief summary of the results, Provide a future perspective on the work, Avoid: repeating the abstract; repeating background information from the introduction; introducing new arguments; repeating the arguments made in the main body; failing to address all of the research questions set out in the introduction.
+% Summary of general trends
+% Learn from past mistakes: summary of detection & mitigation strategies
+% Future Work: Add more incidents / Study how well companies defend against specific threats over time (first bad than better and better?) / Compare detection and mitigation products from different vendors / Evaluate the effectiveness of detection and mitigation strategies via honeypots
 
 \newpage
 %
