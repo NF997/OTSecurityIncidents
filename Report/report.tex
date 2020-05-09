@@ -297,13 +297,26 @@ Last but not least, it is essential to have a solid backup strategy which allows
 \section{Detailed Analysis of the Triton Attack}
 While the previous section conducted a comparative overview of the most prevalent ICS security incidents to highlight general trends, this section focusses on a single attack to detail how insight gained from such an analysis can be used to prepare for future attacks.
 Exemplary, the Triton attack targetting a Saudi Arabian petrochemical plant in 2017 is analyzed.
-The incident---also known as Trisis [citation] and Hatman [citation]---is chosen as an example for several reasons.
+The incident---also known as Trisis \cite{dragos.17} and HatMan\footnote{https://www.us-cert.gov/ics/MAR-17-352-01-HatMan—Safety-System-Targeted-Malware}---is chosen as an example for several reasons.
 First and foremost it was the first attack targetting SIS and therefore potentially threatening human lives.
 Additionally, the attack was highly sophisticated and even if it was eventually detected by the plant operators, they were not able to stop it immediately.
 % Outline?
 \subsection{The Attackers' Approach}
-\subsection{Impact}
-\subsection{Attribution}
+\subsection{Goals, Impacts, and Attribution}
+% Goal unknown, potentially killing people
+As of today, the motivations behind the Triton attack remain unclear.
+At least, there is no reason to believe that it was meant to be part of an espionage operation because no spyware tools like key loggers were used. % Citation?
+Since the adversaries specifically targeted the SIS, it is more likely that the goal of the attacks was to cause disruption.
+% Plant temporarily shut down
+One way to achieve this is to provoke a shutdown of the plant, which also happens to be the actual impact of the attack.
+In total, the oil refinery was out of operation for multiple weeks. % How long exactly
+While this also implied monetary losses for the companies running the petrochemical plant, financial gain or harm does not seem to be the driving force behind the attack \cite{kovacs.17}.
+Another way of creating disruption is to cause an unsafe physical state leading to physical damage. \cite{dragos.17}
+Potentially this could also lead to threats against human lives.
+Whether or not the latter was indeed part of the adversaries goals is still unknown.\\
+% TEMP.Veles/Xenotime,Russia
+The reasoning about the underlying motivations together with the fact that the attack required a tremendous amount of resources suggests that the threat actor behind the attack is a nation-state \cite{kovacs.17}.
+Indeed, the attackers behind the Triton operation seem to be a Russian threat group, given the name TEMP.Veles, which is probably backed by a Russian research institute based in Moscow \cite{fireeye.18}, \cite{sobczak.19}.
 \subsection{Detection and Mitigation Opportunities}
 % Asset Inventory
 % Vulnerability Management Software
