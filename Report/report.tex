@@ -370,6 +370,15 @@ The reasoning about the underlying motivations together with the fact that the a
 Indeed, the attackers behind the Triton operation seem to be a Russian threat group, given the name TEMP.Veles, which is probably backed by a Russian research institute based in Moscow \cite{fireeye.18}, \cite{sobczak.19}.
 \subsection{Detection and Mitigation Opportunities}
 % Stage 1
+As described in Subsection 4.1 it is not exactly known how the attackers achieved initial access to the IT network which is why the following recommendations focus more on stage two of the ICS Cyber Kill Chain.
+However, if it should indeed be the case that the initial access happened via spearphishing, this would be a very common scenario that likely can never be remediated completely.
+An effective countermeasure, however, are continuous security awareness trainings to help employees identify phishing attacks.\\ % citation?
+When it comes to ICS security countermeasures which could have prevented the downtimes of the Petro Rabigh refinery, those focussing on SIS are especially promising.
+Two key strategies would potentially have stopped the Triton attack early on.
+First, a SIS should reside in a very restricted network segment allowing no unnecessary communication to workstations residing possibly even in the IT network.
+Second, SIS should--if not currently programmed by an operator---always be set to \textit{run} mode and never to \textit{program} mode.
+If the according keyswitch is set to \textit{program}, operators should receive an alert.
+Additionally, SIS should be protected by physical access controls and devices to be directly connected to a SIS or the according network segment should be scanned for known malware beforehand. \cite{dragos.17}
 % Detection
 % Anomaly/Incident Detection System
 % Threat Hunting
