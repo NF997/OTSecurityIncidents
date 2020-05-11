@@ -49,7 +49,7 @@ Fourth, the most common goals of ICS attacks are data extraction and causing dis
 Fifth, attackers usually reside several weeks or months in the victims' network before executing the final payload.
 Key defense strategies include increasing the security awareness of employees, strictly separating the ICS network from the enterprise IT network, and establishing a reliable backup strategy.
 
-\keywords{ICS Security \and Security Incident \and Triton.}
+\keywords{ICS Security \and ICS Attacks \and Threat Actors \and Triton.}
 \end{abstract}
 %
 %
@@ -57,12 +57,13 @@ Key defense strategies include increasing the security awareness of employees, s
 
 \section{Introduction}
 % The introduction supplies sufficient background information for the reader to understand and evaluate the work you did. Assume the reader is a generic computer science student, knowledgeable and acquainted with all basic computer science concepts. The introduction should also include a description of the problem you want to solve, your research questions, and an outline for the remainder of your paper. The goal is to: Indicate the field of the work, why this field is important, and what has already been done (with proper citations), Outline the purpose of your paper and announce your research questions, Avoid: repeating the abstract; providing unnecessary background information.
-While Information Technology (IT) refers to software and hardware that generate data for enterprise use, Operational Technology (OT) describes software and hardware able to detect or cause a physical event in an industrial environment.
-% ICS
-The most prominent subcategory of OT are Industrial Control Systems (ICS).
-They are used in a wide variety of industries such as food and agriculture, energy, water, transportation, chemical, nuclear power, pharmaceutical, and discrete manufacturing \cite{stouffer.2011}.\\
+% While Information Technology (IT) refers to software and hardware that generate data for enterprise use, Operational Technology (OT) describes software and hardware able to detect or cause a physical event in an industrial environment.
+% % ICS
+% The most prominent subcategory of OT are Industrial Control Systems (ICS).
+% They are used in a wide variety of industries such as food and agriculture, energy, water, transportation, chemical, nuclear power, pharmaceutical, and discrete manufacturing \cite{stouffer.2011}.\\
 % OT Security <-> IT Security: very recent trend, first incidents
-Initially, ICS were not connected to the internet and strictly separated from IT networks.
+Industrial Control Systems (ICS) are used in a wide variety of industries such as food and agriculture, energy, water, transportation, chemical, nuclear power, pharmaceutical, and discrete manufacturing \cite{stouffer.2011}.
+Initially, they were not connected to the internet and strictly separated from IT networks.
 Due to this isolation, it was hard if not impossible for adversaries to remotely attack ICS which is why until recently security was not a big concern to companies running ICS.
 Instead, they traditionally focus on the safety, continuity, and efficiency of their systems.
 However, the attack surface of many ICS changed within the last two decades since they got connected to traditional IT networks and the internet---sometimes intentionally, sometimes by mistake.
