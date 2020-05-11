@@ -38,9 +38,9 @@
 % The abstract should briefly summarize the contents of the paper in
 % 150--200 words.
 % The goal is to communicate: Background/motivation/context, Aim/objective(s)/problem statement, Approach/method(s)/procedure(s), Results, Conclusion(s)/implications.
-As more and more Industrial Control Systems (ICS) are getting connected to the internet and IT networks the attack surface of these systems increases dramatically which led to an increased number of real world ICS security incidents over the last years.
+As more and more Industrial Control Systems (ICS) are getting connected to enterprise IT networks and the internet the attack surface of these systems increases dramatically which led to an increased number of real world ICS security incidents over the last years.
 It is therefore crucial to analyze and learn from past incidents to avoid common mistakes and to develop efficient detection and mitigation strategies that help to prevent future incidents.
-To aid this process, this paper proposes a systematic comparative overview of historic ICS security incidents.
+To support this process, this paper proposes a systematic comparative overview of historic ICS security incidents.
 Key findings are resulting from this overview and an additional in-depth analysis of the Triton incident include the following.
 First, not only operations targeting specific ICS environments but also untargeted attacks usually dedicated to IT environments---e.g. in the form of ransomware---are becoming more and more a threat to ICS.
 Second, most of the ICS incidents are considered to be state-sponsored.
@@ -63,7 +63,7 @@ Key defense strategies include increasing the security awareness of employees, s
 % They are used in a wide variety of industries such as food and agriculture, energy, water, transportation, chemical, nuclear power, pharmaceutical, and discrete manufacturing \cite{stouffer.2011}.\\
 % OT Security <-> IT Security: very recent trend, first incidents
 Industrial Control Systems (ICS) are used in a wide variety of industries such as food and agriculture, energy, water, transportation, chemical, nuclear power, pharmaceutical, and discrete manufacturing \cite{stouffer.2011}.
-Initially, they were not connected to the internet and strictly separated from IT networks.
+Initially, they were not connected to the internet and strictly separated from enterprise IT networks.
 Due to this isolation, it was hard if not impossible for adversaries to remotely attack ICS which is why until recently security was not a big concern to companies running ICS.
 Instead, they traditionally focus on the safety, continuity, and efficiency of their systems.
 However, the attack surface of many ICS changed within the last two decades since they got connected to traditional IT networks and the internet---sometimes intentionally, sometimes by mistake.
@@ -72,7 +72,7 @@ Inevitably, this led to an ongoing series of ICS security incidents.\\
 While more and more of those incidents are reported, it is business-critical to develop suitable detection and mitigation strategies.
 A solid baseline in this process is analyzing and learning from past incidents.
 This is crucial to avoid common mistakes and to effectively prevent future incidents.
-To aid this process, this paper proposes a systematic comparative overview of historic ICS security incidents focussing on various parameters including targets, threat actors, attack techniques, goals and impacts, dwell times, operator reactions, and detection and mitigation strategies.
+To support this process, this paper proposes a systematic comparative overview of historic ICS security incidents focussing on various parameters including targets, threat actors, attack techniques, goals and impacts, dwell times, operator reactions, and detection and mitigation strategies.
 % Benefits of an overview: Helps to identify patterns and to prevent future incidents (?)
 The overview aims at identifying common attack patterns that could be used to prevent future attacks.
 To the best of the author's knowledge, such an overview has not yet been published.\\
@@ -184,7 +184,7 @@ Note that while being home to important global threat actors as discussed in Sub
 % Sector (+ private/public)
 When it comes to the economic sectors falling victim to targeted ICS attacks, the most affected one is the energy sector being targeted in at least 37\% of the analyzed targeted attacks.
 Most and foremost, those operations include attacks against power grids like the attacks taking place in 2014 and 2015 in Ukraine.
-Other examples of targeted entities within the energy sector include oil and gas pipelines and refineries.
+Other examples of targeted entities within the energy sector include oil and gas pipelines as well as refineries.
 The remaining victims of ICS attacks are spread across a wide variety of other economic sectors including manufacturing, water, petrochemical, governmental organizations, and transportation.
 
 \subsection{Threat Actors}
@@ -226,8 +226,13 @@ An established model to characterize ICS attacks is the ICS Cyber Kill Chain dev
 It is comprised of two stages.
 In stage one, IT intrusion preparation and execution takes places, i.e. the attacker compromises the IT network and positions herself in the ICS network.
 This stage can be completed without specific knowledge about ICS technologies or protocols.
-In stage two, ICS attack development and execution are performed, e.g. an attack targetting certain actuators---for example, water pumps---is developed, tested, and executed.\\
-% Stage 1: Intrusion
+In stage two, ICS attack development and execution are performed, e.g. an attack targetting certain actuators---for example, water pumps---is developed, tested, and executed.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{figures/ICSCyberKillChain.png}
+    \caption{ICS Cyber Kill Chain as introduced by the SANS institute, from \cite{assante.15}.}
+    \label{fig:CyberKillChain}
+\end{figure}\noindent
 When it comes to the initial access in stage one of the ICS Cyber Kill Chain, two attack techniques seem to be most popular among the analyzed incidents.
 The first one is spearphishing which was reportedly performed in at least 26\% of the attacks.
 The second one are zero day exploits which were utilized in at least 11\% of the attacks.
@@ -254,12 +259,6 @@ One important trend in addition to the techniques described above is the trend a
 A case in point are the attacks on the Ukraine power grid.
 The first attack in 2015 was highly manual and the effort put into it could not be directly utilized for attacks against other energy infrastructures.
 One year later, however, there was a second attack targeting the power grid, but this time the adversaries had developed a framework which in theory allows them to scale their attack to a multitude of different victims with a relatively small effort. \cite{greenberg.17}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=8cm]{figures/ICSCyberKillChain.png}
-    \caption{ICS Cyber Kill Chain as introduced by the SANS institute, from \cite{assante.15}.}
-    \label{fig:CyberKillChain}
-\end{figure}
 
 \subsection{Attack Goals and Realized Impacts}
 % Common goals
@@ -372,7 +371,7 @@ In the case of Petro Rabigh, however, the switch was set to \textit{program mode
 Why this was the case is not known, but it might very likely be the case that an engineer programming the SIS simply forgot to switch it back to \textit{run} mode.
 In addition to these modes of operation, network connectivity to a SIS should, in theory, be extremely limited if existent at all.
 In practice, for example, plant operators sometimes want to retrieve data from SIS to analyze them which is why they allow for more network connectivity than needed for reasons of convenience.
-This was also the case at Petro Rabigh (?) [citation].
+This seemed to be the case at Petro Rabigh, too. % citation
 \cite{dragos.17}\\
 After the adversaries had found out the exact type of SIS the plant was using, they left for about two years.
 It may very well be the case that in this timespan they managed to acquire a physical copy of the same type of SIS and developed a targeted malware that came to be known as Triton.
@@ -414,7 +413,7 @@ Potentially this could also lead to threats against human lives.
 Whether or not the latter was indeed part of the adversaries goals is still unknown.\\
 % TEMP.Veles/Xenotime,Russia
 The reasoning about the underlying motivations together with the fact that the attack required a tremendous amount of resources suggests that the threat actor behind the attack is a nation-state \cite{kovacs.17}.
-Indeed, the attackers behind the Triton operation seem to be a Russian threat group, given the name TEMP.Veles, which is probably backed by a Russian research institute based in Moscow \cite{fireeye.18}, \cite{sobczak.19}.
+Indeed, the attackers behind the Triton operation seem to be a Russian threat group, given the name \textit{TEMP.Veles}, which is probably backed by a Russian research institute based in Moscow \cite{fireeye.18}, \cite{sobczak.19}.
 
 \subsection{Detection and Mitigation Opportunities}
 % Stage 1
