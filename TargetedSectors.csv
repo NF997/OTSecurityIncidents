@@ -1,8 +1,7 @@
 Sector, # Attacks
 Chemical,1
 Critical Manufacturing,1
-ENERGY,13
-Gas,1
+ENERGY,8+2
 Oil,2
 Nuklear Power,1
 Communications,1

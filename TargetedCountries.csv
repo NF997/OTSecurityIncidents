@@ -1,5 +1,5 @@
 Country,# Attacks
-MIDDLE EAST,14
+MIDDLE EAST,1+13 (effectively 9)
 Iran,3
 Saudi Arabia,5
 United Arabic Emirates,1
@@ -7,13 +7,14 @@ Quatar,1
 Lebanon,1
 Palestinia,1
 Israel,1
+
 South Korea,1
-US,6
+US,5
 Australia,1
 Eastern Europe,1
 USSR,1
 Central Asia,1
-EUROPE,13
+EUROPE,13 (effectively 10)
 Spain,1
 Germany,1
 Ukraine,4
