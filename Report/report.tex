@@ -350,35 +350,36 @@ For these reasons, Triton is considered to be of significant importance to the I
 % Stage 1
 As described in Subsection 3.3, an ICS attack usually is comprised of the two stages of the ICS Cyber Kill Chain.
 When it comes to Triton, the details of stage one are still unclear.
-It seems that the IT network of the Petro Rabigh oil refinery got breached already in 2014, however, the exact techniques used for the initial access and the movement into the ICS network are not unambigously known.
-It is suspected, however, that the initial access happened via a spearphishing attack. [citation]\\
+It seems that the IT network of the Petro Rabigh oil refinery got breached already in 2014, however, the exact techniques used for the initial access and the movement into the ICS network are not unambiguously known.
+It is suspected, however, that the initial access happened via a spearphishing attack. % [citation]
+\\
 % Stage 2: Triton malware
-Stage two of the ICS Cyber Kill Chain began shortly after the initial breach of the IT network, when the attackers managed to access the Triconex SIS from Schneider Electric---therefore the name Triton or Trisis.
+Stage two of the ICS Cyber Kill Chain began shortly after the initial breach of the IT network when the attackers managed to access the Triconex SIS from Schneider Electric---therefore the name Triton or Trisis.
 % Background: SIS
 SIS are an integral part of ICS in that their sole purpose is to maintain safe operations should failures of other hard- or software occur.
 They should prevent catastrophic incidents like explosions or fire and protect human lives \cite{pinto.18}.
-It is therefore crucial that this last line of automated safety denfense operates correctly.
+It is therefore crucial that this last line of automated safety defense operates correctly.
 The functionality of a SIS can be broken down as follows.
-The inputs for a SIS are an array of sensors measuring physical values e.g. temparature, pressure or rotation speed.
+The inputs for a SIS are an array of sensors measuring physical values e.g. temperature, pressure, or rotation speed.
 In real time, the SIS analyzes these values and outputs a single decision: if it is safe to continue operation.
-Should the SIS decide that there is an unsafe physical condition, suitable commands are sent to according actuators like water pumps, machine engines or valves.
-E.g. if a SIS would detect a dangerously high temparature in a gas tank, the valves regulating the gas inflow would be closed. \cite{dragos.17} \\
+Should the SIS decide that there is an unsafe physical condition, suitable commands are sent to according actuators like water pumps, machine engines, or valves.
+E.g. if a SIS would detect dangerously high temperature in a gas tank, the valves regulating the gas inflow would be closed. \cite{dragos.17} \\
 % Attack method
-To protect a SIS from unintended modification, there is a physical keyswitch indication the mode of operation.
+To protect a SIS from unintended modification, there is a physical keyswitch controlling the mode of operation.
 Under normal circumstances this switch should be set to \textit{run} which disables arbitrary changes to the logic of the SIS.
 In the case of Petro Rabigh, however, the switch was set to \textit{program mode} which allows for logic changes.
 Why this was the case is not known, but it might very likely be the case that an engineer programming the SIS simply forgot to switch it back to \textit{run} mode.
-In addition to these modes of operation,network connectivity to a SIS should in theory be extremely limited if existent at all.
-In practice, for example, plant operators sometimes want to retrieve data from SIS in order to analyze them which is why they allow for more network connectivity than needed for reasons of convenience.
+In addition to these modes of operation, network connectivity to a SIS should, in theory, be extremely limited if existent at all.
+In practice, for example, plant operators sometimes want to retrieve data from SIS to analyze them which is why they allow for more network connectivity than needed for reasons of convenience.
 This was also the case at Petro Rabigh (?) [citation].
 \cite{dragos.17}\\
 After the adversaries had found out the exact type of SIS the plant was using, they left for about two years.
-It may very well be the case that in this timespan they managed to aquire a physical copy of the same type of SIS and developed a targeted malware which came to be knwon as Triton.
-After this timeframe, they returned the the oil refinery and installed the malware on the SIS.
+It may very well be the case that in this timespan they managed to acquire a physical copy of the same type of SIS and developed a targeted malware that came to be known as Triton.
+After this timeframe, they returned to the oil refinery and installed the malware on the SIS.
 The goal of the malware was to change the internal logic of the SIS which could lead to severe consequences.
-It could, for example, reprogram the SIS in a way such that it would not shutdown the plant in the case of an emergency. \cite{lee.20}\\
+It could, for example, reprogram the SIS in a way such that it would not shut down the plant in the case of an emergency. \cite{lee.20}\\
 % First outage
-Indeed, shortly after the malware was installed, the SIS tripped and shutdown the oil refinery.
+Indeed, shortly after the malware was installed, the SIS tripped and shut down the oil refinery.
 However, this shutdown was not intended by the attackers.
 It turned out that it was rather the consequence of a programming error on their side which instead of rewriting the logic of the SIS it brought it down which led to a shutdown of the whole plant.
 % Response
@@ -386,17 +387,18 @@ The plant operators in charge at this point did not consider the SIS failure as 
 Instead, they thought it must be some error of the SIS itself.
 So they contacted the SIS vendor and hired some investigators, however, none of them was an ICS security specialist.
 In the end, they were not able to identify the root cause of the shutdown and considered it to be a one time error.
-Eventually they brought up the refinery again. \cite{lee.20}\\
+Eventually, they brought up the refinery again. \cite{lee.20}\\
 % Attackers response
 This meant that the adversaries got a second chance to attack.
 Indeed they were able to identify the bug which made the Triton malware fail in the first attempt.
 They tried to fix this bug and attacked the SIS again.
 % Second outage
 Just like a few weeks before, the SIS tripped and the refinery was shut down again.
-In hindsight it turned out that the attackers did not correctly fix the bug so essentially, the attack finally failed due to human error.
+In hindsight, it turned out that the attackers did not correctly fix the bug so essentially, the attack finally failed due to human error.
 % Response
 After the SIS tripped a second time, the plant operators brought in ICS security specialists which were able to identify that the SIS was infected with malware.
 % And then?
+
 \subsection{Goals, Impacts, and Attribution}
 % Goal unknown, potentially killing people
 As of today, the motivations behind the Triton attack remain unclear.
@@ -412,6 +414,7 @@ Whether or not the latter was indeed part of the adversaries goals is still unkn
 % TEMP.Veles/Xenotime,Russia
 The reasoning about the underlying motivations together with the fact that the attack required a tremendous amount of resources suggests that the threat actor behind the attack is a nation-state \cite{kovacs.17}.
 Indeed, the attackers behind the Triton operation seem to be a Russian threat group, given the name TEMP.Veles, which is probably backed by a Russian research institute based in Moscow \cite{fireeye.18}, \cite{sobczak.19}.
+
 \subsection{Detection and Mitigation Opportunities}
 % Stage 1
 As described in Subsection 4.1 it is not exactly known how the attackers achieved initial access to the IT network which is why the following recommendations focus more on stage two of the ICS Cyber Kill Chain.
