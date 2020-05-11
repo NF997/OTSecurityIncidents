@@ -94,7 +94,7 @@ On the other hand, however, they only provide basic information about the incide
 % Reports from Companies in the field: Dragos Threat Report, CyberX Global IoT/ICS Risk Report,...
 Second, ICS security companies like Dragos \cite{dragos.19} and CyberX \cite{cyberx.19} publish yearly ICS threat reports discussing relevant incidents.
 Those reports are neither complete with regards to the incidents they cover nor do they provide in-depth analyses of the covered attacks.
-However, they do a good job of highlighting trends in the threat landscape throughout the years.
+However, they highlight important trends in the threat landscape throughout the years.
 Third, dedicated scientific papers are focussing on single ICS incidents like the attacks targeting the Ukraine power grid \cite{eisac.16} or the Triton malware \cite{pinto.18}. Those papers usually cover single incidents in-depth and help in understanding how exactly the adversaries operated.
 Fourth, there are numerous blog posts, press releases, and conference talks covering ICS incidents.
 In addition, there is the MITRE ATT\&CK ICS database\footnote{https://collaborate.mitre.org/attackics/index.php/Main\_Page} which includes information on tactics, techniques, and software used by threat groups to perform ICS attacks.
@@ -105,11 +105,11 @@ All of the above-mentioned sources are taken into account to achieve exactly thi
 % Other papers covering the big incidents: Ukraine, Triton,...
 % IT incidents overview
 \section{Comparative Overview of ICS Security Incidents}
-From the literature and resources stated in Section 2, a total of 29 ICS security incidents were extracted.
-Those form the basis of the following analysis and can be found in table [appendix table].
+From the literature and resources stated in Section 2, a total of 27 ICS security incidents were extracted.
+Those form the basis of the following analysis and can be found in Table \ref{tab:incidents}.
 Note that due to incidents not being reported, the tremendous amount of incidents that are reported and new incidents occurring steadily, this table is inherently incomplete, but rather tries to focus on the most prevalent attacks launched until February 2020.
-In the subsections below, a comparative overview of these incidents will be given.
-Each subsection tries to compare the incidents with regards to specific attributes, e.g. the involved threat actors or the utilized attack techniques.
+The following subsections provide a comparative overview of these incidents.
+Each subsection aims to compare the incidents with regards to specific attributes, e.g. the involved threat actors or the utilized attack techniques.
 % (
 % Most subsections contain both quantitative as well as qualitative statements.
 % Please keep in mind, though, that the quantitative numbers are solely intended to highlight important trends and that the according values might contains inaccuracies.
@@ -310,7 +310,7 @@ When the final payload was already delivered by the adversaries, however, often 
 
 \subsection{Detection and Mitigation Strategies}
 % Mitigation against untargeted ransom- & wiperware
-After comparatively analyzing 28 ICS incidents a multitude of possible detection, and mitigation strategies can be identified which can be leveraged to defend ICS against future threats.\\
+After comparatively analyzing 27 ICS incidents a multitude of possible detection, and mitigation strategies can be identified which can be leveraged to defend ICS against future threats.\\
 % Detection
 % Asset Inventory
 To be able to detect ongoing ICS attacks, the first fundamental resource is an up-to-date asset inventory.
@@ -460,7 +460,7 @@ Fifth, attackers usually reside several weeks or months in the victims' network 
 % Learn from past mistakes: summary of detection & mitigation strategies
 Keeping these trends in mind, possible defense strategies include increasing the security awareness of employees, strictly separating the ICS network from the enterprise IT network, and establishing a reliable backup strategy. \\
 % Future Work: Add more incidents / Study how well companies defend against specific threats over time (first bad than better and better?) / Compare detection and mitigation products from different vendors / Evaluate the effectiveness of detection and mitigation strategies via honeypots
-To build upon these results and to make them more precise it would be useful to include additional ICS incidents to the 28 that are considered in the proposed overview.
+To build upon these results and to make them more precise it would be useful to include additional ICS incidents to the 27 that are considered in the proposed overview.
 Additionally, it could be interesting to study how ICS companies manage to defend against known threats over the course of time.
 Core hypotheses to test would be if companies are more likely to defend against a certain threat the longer it is publicly known and if so, how fast this adaptation of defense strategies happens.
 Furthermore, a comparison of detection and mitigation products form different vendors with an according evaluation---possibly utilizing ICS honeypots---could be considered.
