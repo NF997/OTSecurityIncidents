@@ -271,7 +271,7 @@ This motivates ransomware attacks like WannaCry or LockerGoga as well as informa
 Second, some adversaries are interested in the data they steal themselfs and do not intend to sell them.
 This motivates ICS espionage operations like StoneDrill were Iranian threat groups gathered intelligence about Saudi Arabian ICS environments.
 Third, there are threat actors which intend to disrupt the regular operation of ICS by causing outages or even physical damage.
-The latter was e.g. the case in the famous Stuxnet incident in 2010 were the US and Israelian government attacked nuklear enrichment facilities of Iran in order to sabotage the possible development of nuklear weapons.
+The latter was e.g. the case in the famous Stuxnet incident in 2010 where the US and Israelian government attacked nuclear enrichment facilities of Iran in order to sabotage the possible development of nuclear weapons.
 Untargeted attacks falling into this category are typically related to wiperware which erases or encrypts hard drives without a subsequent ransom demand.\\
 % How often were they successful
 In total, a minimum of 85\% of the attacks are considered to be at least partly successful in achieving their goals with regards to some of their victims.
@@ -286,16 +286,16 @@ Furthermore, untargeted attacks often partly fail to achieve their goal since a 
 \subsection{Dwell Times and Reactions}
 % Dwell times
 Dwell time describes how long an adversary is in a system before the actual attack payload is executed.
-While sometimes it is possible to give an accurate estimation for this number thanks to digital forensics after an incident, keep in mind that, in general, this is a non-trivial task and potentially leads to inaccuracies.
-A rough trend, however, can be detected when analyzing important ICS incidents.
+% While sometimes it is possible to give an accurate estimation for this number thanks to digital forensics after an incident, keep in mind that, in general, this is a non-trivial task and potentially leads to inaccuracies.
+% A rough trend, however, can be detected when analyzing important ICS incidents.
 % Untargeted: often days
-In the context of untargeted attacks, the dwell time usually is a matter of days, while when speaking about targeted attacks, the dwell time typically ranges from multiple months, e.g. in the attacks targetting the Ukraine power grid and the Triton incident, to multiple years.
+In the context of untargeted attacks, the dwell time usually is a matter of days, while when speaking about targeted attacks, it typically ranges from multiple months, e.g. in the attacks targetting the Ukraine power grid and the Triton incident, to multiple years.
 The latter is considered to be the case, for example, when considering the Red October espionage campaign against multiple countries initiated by a Russian threat actor.
 % Targeted multiple months (Industroyer, Blackenergy, Triton) to multiple years (Red October)
 % Lots of time to detect the intrusion
 It seems that with dwell times this long it should be possible for the ICS network operators to detect that something is wrong within their systems before the adversaries deliver the final payload.
 % However: Time of Discovery medium BlackEnergy & Triton but most often late
-Unfortunately, while this holds true in theory, attacks usually are not detected in their early stages in practice.
+Unfortunately, while this holds in theory, attacks usually are not detected in their early stages in practice.
 There are some cases---BlackEnergy and Triton---where the administrators were able to detect that something is wrong before the actual attack payload was executed, but most often only after the final exploit is delivered the attack is detected.\\
 % Typical Reactions (do they help?)
 % Untargeted attacks: Pay ransom (via insurance) or restore via backup (maybe buy new hard drives <-> Shamoon)
@@ -305,14 +305,14 @@ Often companies have dedicated insurances that cover such ransom demands under c
 The typical response to a destructive untargeted attack, however, is to restore operations from backups.
 % Targeted attacks: When medium usually shutdown like Triton
 % When late digital forensics
-In the case of targeted attacks, when operators suspect that an intrusion has happened, they often shut down the ICS in order to prevent further breaches, physical damage, and threats to human lifes.
+In the case of targeted attacks, when operators suspect that an intrusion has happened, they often shut down the ICS to prevent further breaches, physical damage, and threats to human lives.
 This happened, e.g. in the Triton incident.
 When the final payload was already delivered by the adversaries, however, often the only thing left to do is to start recovery processes that aim to restore operations and typically also include digital forensics in order to analyze how the incident could have happened, e.g. how the ICS network could be breached, in the first place.
 % As a result of the Shamoon attack, however, thousands of hard drives were destroyed irretrievably such that the affected company had to quickly buy large amounts of hard drives, which lead to a world-wide shortage of those.
 
 \subsection{Detection and Mitigation Strategies}
 % Mitigation against untargeted ransom- & wiperware
-After comparatively analyzing 27 ICS incidents a multitude of possible detection, and mitigation strategies can be identified which can be leveraged to defend ICS against future threats.\\
+After comparatively analyzing 27 ICS incidents a multitude of potential detection and mitigation strategies can be identified which can be leveraged to defend ICS against future threats.\\
 % Detection
 % Asset Inventory
 To be able to detect ongoing ICS attacks, the first fundamental resource is an up-to-date asset inventory.
@@ -321,8 +321,7 @@ Only with that, possibly dangerous network or host activity can be detected.
 Such detection is usually offered by IDS that lookout, e.g. on network tabs or SPAN ports, for anomalies in the network traffic.
 Compared to traditional IT networks, this is a quite promising approach, since---in contrast to IT networks---the expected network traffic does not vary much such that false positives can be relatively easy tuned to a minimum.
 % Threat Hunting
-A more active approach to IDS is threat hunting.
-[...]\\
+A more active approach to IDS is threat hunting where security specialists try to identify adversaries that already reside inside the victims' network.\\
 % Mitigation
 When it comes to suitable mitigation strategies, the first line of defense to strengthen are the humans operating ICS.
 % Security Awareness
@@ -337,7 +336,7 @@ Even if a patch might not be possible, one could e.g. at least harden the networ
 Inspired by traditional IT networks, firewalls are becoming more and more popular in ICS environments, too.
 They are especially critical in overlapping parts of the IT and ICS networks.
 % Backups
-Last but not least, it is essential to have a solid backup strategy which allows for restoring operations fast and reliable, e.g. in the case of a ransom- or wiperware attack.
+Last but not least, it is essential to have a solid backup strategy that allows for restoring operations fast and reliable, e.g. in the case of a ransom- or wiperware attack.
 
 \section{Detailed Analysis of the Triton Attack}
 While the previous section conducted a comparative overview of the most prevalent ICS security incidents to highlight general trends, this section focusses on a single attack to detail how insight gained from such an analysis can be used to prepare for future attacks.
