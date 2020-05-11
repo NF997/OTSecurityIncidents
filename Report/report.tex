@@ -115,7 +115,7 @@ Each subsection aims to compare the incidents with regards to specific attribute
 % Please keep in mind, though, that the quantitative numbers are solely intended to highlight important trends and that the according values might contains inaccuracies.
 % This is due to the fact that often specific information about incidents is unknown or not known for sure.
 % )
-\begin{table}[]
+\begin{table}[h]
     \label{tab:incidents}
 	\centering
     \begin{tabular}{|l|l|l|l|l|}
@@ -221,7 +221,7 @@ ICS attacks are therefore sometimes even considered an act of war. % Citations a
 
 \subsection{Attack Techniques}
 % ICS cyber kill chain
-An established model to characterize ICS attacks is the ICS Cyber Kill Chain developed by the SANS institute and depicted in figure \ref{fig:CyberKillChain}.
+An established model to characterize ICS attacks is the ICS Cyber Kill Chain developed by the SANS institute and depicted in Figure \ref{fig:CyberKillChain}.
 It is comprised of two stages.
 In stage one, IT intrusion preparation and execution takes places, i.e. the attacker compromises the IT network and positions herself in the ICS network.
 This stage can be completed without specific knowledge about ICS technologies or protocols.
@@ -230,7 +230,7 @@ In stage two, ICS attack development and execution are performed, e.g. an attack
 When it comes to the initial access in stage one of the ICS Cyber Kill Chain, two attack techniques seem to be most popular among the analyzed incidents.
 The first one is spearphishing which was reportedly performed in at least 26\% of the attacks.
 The second one are zero day exploits which were utilized in at least 11\% of the attacks.
-When inside the victims IT network, attackers often use common software.
+When inside the victims' IT network, attackers often use common software.
 For example, in at least 11\% of the cases Mimikatz was used for credential capturing.
 Often, popular exploitation frameworks like Metasploit and Cobalt Strike are used, too.
 More recent trends are the use of sophisticated obfuscation and evasion techniques and \textit{living off the land} tools---like PowerShell or PsExec---in order to avoid being detected by Intrusion Detection Systems (IDS).\\
@@ -247,7 +247,7 @@ To make disaster recovery harder, attackers often wipe Human-Machine Interfaces 
 % Special Case: Target Store's HVAC
 While according to the ICS Cyber Kill Chain stage one typically has to take place before stage two, there is an example where the attack was performed the other way around.
 In 2013, an unknown attacker stole login credentials of a third-party heating, ventilation, and air conditioning (HVAC) contractor of US Target Stores.
-From the ICS network she then pivoted into the IT network in order to install credit card stealing software. \cite{hemsley.18}\\
+From the ICS network, she then pivoted into the IT network to install credit card stealing software. \cite{hemsley.18}\\
 % Scalability of the attack: Trend goes to scalable frameworks?
 One important trend in addition to the techniques described above is the trend away from highly manual attacks specifically tailored for a single victim towards more victim-agnostic ICS attack frameworks enabling scalable attacks.
 A case in point are the attacks on the Ukraine power grid.
@@ -259,6 +259,7 @@ One year later, however, there was a second attack targeting the power grid, but
     \caption{ICS Cyber Kill Chain as introduced by the SANS institute, from \cite{assante.15}.}
     \label{fig:CyberKillChain}
 \end{figure}
+
 \subsection{Attack Goals and Realized Impacts}
 % Common goals
 The most common goal of adversaries is to extract data from the victim's systems. 37\% of all analyzed attacks were designed to achieve exactly this.
