@@ -4,6 +4,7 @@
 %
 \documentclass[runningheads]{llncs}
 %
+\usepackage{float}
 \usepackage{graphicx}
 % Used for displaying a sample figure. If possible, figure files should
 % be included in EPS format.
@@ -37,15 +38,16 @@
 % The abstract should briefly summarize the contents of the paper in
 % 150--200 words.
 % The goal is to communicate: Background/motivation/context, Aim/objective(s)/problem statement, Approach/method(s)/procedure(s), Results, Conclusion(s)/implications.
-As more and more Industrial Control Systems (ICS) are getting connected to the internet and IT networks---intentionally or by mistake---the attack surface of these systems increases dramatically.
-Due to this, the number of real world ICS security incidents rises, too, which is why it is crucial to develop efficient detection and mitigation strategies.
-A solid baseline in this process is analyzing and learning from past incidents.
-This is crucial to avoid common mistakes and to effectively prevent future incidents.
-To aid this process, this paper proposes a systematic comparative overview of historic ICS security incidents focussing on various parameters including targets, threat actors, attack techniques, goals and impacts, dwell times, operator reactions and detection and mitigation strategies.
-Several key findings are resulting from this overview and an in-depth analysis of the Triton incident.
-First, x.
-Second, y.
-Third, z.
+As more and more Industrial Control Systems (ICS) are getting connected to the internet and IT networks the attack surface of these systems increases dramatically which led to an increased number of real world ICS security incidents over the last years.
+It is therefore crucial to analyze and learn from past incidents to avoid common mistakes and to develop efficient detection and mitigation strategies that help to prevent future incidents.
+To aid this process, this paper proposes a systematic comparative overview of historic ICS security incidents.
+Key findings are resulting from this overview and an additional in-depth analysis of the Triton incident include the following.
+First, not only operations targeting specific ICS environments but also untargeted attacks usually dedicated to IT environments---e.g. in the form of ransomware---are becoming more and more a threat to ICS.
+Second, most of the ICS incidents are considered to be state-sponsored.
+Third, important trends in terms of attack techniques are spearphishing, zero-day exploits, sophisticated obfuscation and evasion techniques, and living off the land tools.
+Fourth, the most common goals of ICS attacks are data extraction and causing disruption.
+Fifth, attackers usually reside several weeks or months in the victims' network before executing the final payload.
+Key defense strategies include increasing the security awareness of employees, strictly separating the ICS network from the enterprise IT network, and establishing a reliable backup strategy.
 
 \keywords{ICS Security \and Security Incident \and Triton.}
 \end{abstract}
@@ -249,8 +251,9 @@ One important trend in addition to the techniques described above is the trend a
 A case in point are the attacks on the Ukraine power grid.
 The first attack in 2015 was highly manual and the effort put into it could not be directly utilized for attacks against other energy infrastructures.
 One year later, however, there was a second attack targeting the power grid, but this time the adversaries had developed a framework which in theory allows them to scale their attack to a multitude of different victims with a relatively small effort. \cite{greenberg.17}
-\begin{figure}[h]
-    \fbox{\includegraphics[width=\textwidth]{figures/ICSCyberKillChain.png}}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{figures/ICSCyberKillChain.png}
     \caption{ICS Cyber Kill Chain as introduced by the SANS institute, from \cite{assante.15}.}
     \label{fig:CyberKillChain}
 \end{figure}
