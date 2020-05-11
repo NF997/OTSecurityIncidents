@@ -1,0 +1,28 @@
+Incident;First Impact;Targeted;Target Country;Sector;Threat Actors;Threat Actor Country;Success
+Maroochy Water;2000;Yes;Australia;(waste)water;Individual (Vitek Boden);?;Yes
+Conficker;2008;No;Multiple (+200);Multiple (15M hosts);Ukraine Criminals;Ukraine;Yes
+Stuxnet;2010;Yes;Iran;Nuklear Power;US Gov / Israel Gov / British Gov;US/UK/Israel;Yes
+NightDragon;2010;Yes;Global;Energy / Oil / Petrochemical;Probably China;China;Yes
+Duqu;2011;Yes;Multiple;Multiple?;Duqu;?;Partly
+Gas Pipeline Cyber-Intrusion Campaign;2011;Yes;?;Energy;China (?);China (?);Yes
+Shamoon;2012;Yes;Saudi Arabia / Quatar;Energy;APT34/APT35/APT33;Iran;Yes
+Flame/sKyWIper;2012;No;Middle East;?;?;?;Yes
+Gauss;2012;Yes;Lebanon/Palestinian Territories/Israel;?;?;?;Yes
+Red October;2013;Yes;Eastern Europe/USSR/Central Asia;Gov / Research;Inception Framework;Russia;Yes
+Target Store's HVAC;2013;Yes;US;Retail;?;?;Yes
+New York Dam;2013;Yes;US;Water?;Iran (possibly Gov);Iran;Yes
+Havex/Backdoor.Oldrea;2013;Yes;US/Europe;Multiple;Energetic Bear;Russia;Yes
+German Steel Mill;2014;Yes;Germany;Manufacturing (?);?;?;Yes
+BlackEnergy(3);2015;Yes;Ukraine;Energy;Energetic Bear;Russia;Yes
+Industroyer/CRASHOVERRIDE;2016;Yes;Ukraine;Energy;Energetic Bear;Russia;Partly
+“Kemuri” water company;2016;Yes;US (?);Water;“hacktivist” group with ties to Syria;Syria;Unknown
+Op Ghoul;2016;Yes;Middle East + others (> 30 countries);industrial/manufacturing/engineering;Op Ghoul;?;Yes
+WannaCry;2017;No;Multiple;Multiple;Lazarus Group;North Korea;Yes
+NotPetya;2017;Yes;Ukraine + other;Multiple;TeleBots;Russia;Yes
+BitPaymer;2017;Yes;Spain/Scottland + others;Multiple;Indrik Spider;?;Partly
+Dragonfly 2.0;2017;Yes;?;Energy;Energetic Bear;Russia;Unknown
+Triton/Trisis/Hatman;2017;Yes;Saudi Arabia;Chemical (/Energy?);TEMP.Veles/Xenotime;Russia;No
+StoneDrill;2017;Yes;Saudi Arabia/1 Org in Europe;?;APT34/APT33;Iran;Partly
+Shamoon 3;2018;Yes;Southeast Europe & Middle East;Oil/Gas/Energy/Communications/Gov;APT33;Iran;Partly
+LockerGoga;2019;Yes;Norway/France/US + others;Critical Manufacturing + others;FIN6;?;No
+Maze/ChaCha;2019;No;Multiple;Multiple;Turla;Russia;Partly
