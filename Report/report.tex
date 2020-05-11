@@ -59,30 +59,31 @@ Key defense strategies include increasing the security awareness of employees, s
 % The introduction supplies sufficient background information for the reader to understand and evaluate the work you did. Assume the reader is a generic computer science student, knowledgeable and acquainted with all basic computer science concepts. The introduction should also include a description of the problem you want to solve, your research questions, and an outline for the remainder of your paper. The goal is to: Indicate the field of the work, why this field is important, and what has already been done (with proper citations), Outline the purpose of your paper and announce your research questions, Avoid: repeating the abstract; providing unnecessary background information.
 While Information Technology (IT) refers to software and hardware that generate data for enterprise use, Operational Technology (OT) describes software and hardware able to detect or cause a physical event in an industrial environment.
 % ICS
-Probably the most important subcategory of OT, at least revenue-wise, are Industrial Control Systems (ICS).
-They are used in a wide variety of industries such as food and agriculture, energy, water, transportation, chemical, nuclear power, pharmaceutical and discrete manufacturing \cite{stouffer.2011}.\\
+The most prominent subcategory of OT are Industrial Control Systems (ICS).
+They are used in a wide variety of industries such as food and agriculture, energy, water, transportation, chemical, nuclear power, pharmaceutical, and discrete manufacturing \cite{stouffer.2011}.\\
 % OT Security <-> IT Security: very recent trend, first incidents
 Initially, ICS were not connected to the internet and strictly separated from IT networks.
 Due to this isolation, it was hard if not impossible for adversaries to remotely attack ICS which is why until recently security was not a big concern to companies running ICS.
-Instead, they traditionally focus on safety, continuity and efficiency of their systems.
+Instead, they traditionally focus on the safety, continuity, and efficiency of their systems.
 However, the attack surface of many ICS changed within the last two decades since they got connected to traditional IT networks and the internet---sometimes intentionally, sometimes by mistake.
 Inevitably, this led to an ongoing series of ICS security incidents.\\
 % Problem: No overview; Contribution: Overview
 While more and more of those incidents are reported, it is business-critical to develop suitable detection and mitigation strategies.
 A solid baseline in this process is analyzing and learning from past incidents.
 This is crucial to avoid common mistakes and to effectively prevent future incidents.
-To aid this process, this paper proposes a systematic comparative overview of historic ICS security incidents focussing on various parameters including targets, threat actors, attack techniques, goals and impacts, dwell times, operator reactions and detection and mitigation strategies.
+To aid this process, this paper proposes a systematic comparative overview of historic ICS security incidents focussing on various parameters including targets, threat actors, attack techniques, goals and impacts, dwell times, operator reactions, and detection and mitigation strategies.
 % Benefits of an overview: Helps to identify patterns and to prevent future incidents (?)
 The overview aims at identifying common attack patterns that could be used to prevent future attacks.
 To the best of the author's knowledge, such an overview has not yet been published.\\
 % Triton
-In addition, the Triton incident of 2017 will be analyzed in detail to showcase how attackers perform sophisticated ICS attacks and which detection and mitigation strategies can be derived from their methodologies.
+Additionally, the Triton incident of 2017 will be analyzed in detail to showcase how attackers perform sophisticated ICS attacks and which detection and mitigation strategies can be derived from their methodologies.
 The incident was chosen due to its potential life-threatening impact and the novel attack approach targeting Safety Instrumented Systems (SIS).\\
 % Outline
 The remainder of the paper is structured as follows.
 Section 2 provides an overview of related work in the area of ICS incidents which is used as the basis of the comparative overview that is provided in Section 3.
 Exemplary the Triton incident is analyzed in detail in Section 4.
-Section 5 concludes the paper by emphasizing the need to learn from past mistakes.
+Section 5 concludes the paper by summarizing key findings and suggesting directions for future work.
+
 \section{Related Work}
 % In this section, you provide an overview of papers written by other scientists that have covered a problem similar to yours. You can find related work in web search engines and scientific literature databases. Some of the most prominent ones in the field of computer science are: Google Scholar, Scopus, ACM Digital Library, IEEE Xplore, Lecture Notes in Computer Science.
 There are four main types of publicly available sources that provide information on ICS security incidents.
