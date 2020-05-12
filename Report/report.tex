@@ -215,7 +215,7 @@ Since this incident in the year 2000, ICS attacks got a lot more sophisticated w
 At least 59\% of the analyzed attacks are considered to be performed by government-funded threat actors.
 On the one hand, targeted ICS attacks require a large amount of knowledge and resources which often only nation-states can provide.
 On the other hand, governments can profit in various ways from ICS attacks against foreign countries, be it through industrial espionage, by making critical facilities and infrastructures unavailable or even by targetting human lives.
-ICS attacks are therefore sometimes even considered an act of war. % Citations and further research.
+ICS attacks are therefore sometimes even considered an act of war \cite{lindsey.19}. % further research.
 
 \subsection{Attack Techniques}
 % ICS cyber kill chain
@@ -348,7 +348,7 @@ For these reasons, Triton is considered to be of significant importance to the I
 As described in Subsection 3.3, an ICS attack usually is comprised of the two stages of the ICS Cyber Kill Chain.
 When it comes to Triton, the details of stage one are still unclear.
 It seems that the IT network of the Petro Rabigh oil refinery got breached already in 2014, however, the exact techniques used for the initial access and the movement into the ICS network are not unambiguously known.
-It is suspected, however, that the initial access happened via a spearphishing attack. % [citation]
+It is suspected, however, that the initial access happened via a spearphishing attack \cite{nohe.19}.
 \\
 % Stage 2: Triton malware
 Stage two of the ICS Cyber Kill Chain began shortly after the initial breach of the IT network when the attackers managed to access the Triconex SIS from Schneider Electric---therefore the name Triton or Trisis.
@@ -368,7 +368,7 @@ In the case of Petro Rabigh, however, the switch was set to \textit{program mode
 Why this was the case is not known, but it might very likely be the case that an engineer programming the SIS simply forgot to switch it back to \textit{run} mode.
 In addition to these modes of operation, network connectivity to a SIS should, in theory, be extremely limited if existent at all.
 In practice, for example, plant operators sometimes want to retrieve data from SIS to analyze them which is why they allow for more network connectivity than needed for reasons of convenience.
-This seemed to be the case at Petro Rabigh, too. % citation
+This might have been the case at Petro Rabigh, too.
 \cite{dragos.17}\\
 After the adversaries had found out the exact type of SIS the plant was using, they left for about two years.
 It may very well be the case that in this timespan they managed to acquire a physical copy of the same type of SIS and developed a targeted malware that came to be known as Triton.
@@ -416,7 +416,7 @@ Indeed, the attackers behind the Triton operation seem to be a Russian threat gr
 % Stage 1
 As described in Subsection 4.1 it is not exactly known how the attackers achieved initial access to the IT network which is why the following recommendations focus more on stage two of the ICS Cyber Kill Chain.
 However, if it should indeed be the case that the initial access happened via spearphishing, this would be a very common scenario that likely can never be remediated completely.
-An effective countermeasure, however, are continuous security awareness trainings to help employees identify phishing attacks.\\ % citation?
+An effective countermeasure, however, are continuous security awareness trainings to help employees identify phishing attacks \cite{arachchilage.14}.\\
 When it comes to ICS security countermeasures which could have prevented the downtimes of the Petro Rabigh refinery, those focussing on SIS are especially promising.
 Two key strategies would potentially have stopped the Triton attack early on.
 First, a SIS should reside in a very restricted network segment allowing no unnecessary communication to workstations residing possibly even in the IT network.
