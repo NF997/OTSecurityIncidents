@@ -45,7 +45,7 @@ It is therefore crucial to analyze and learn from past incidents to avoid common
 To support this process, this paper proposes a systematic comparative overview of historic ICS security incidents and an in-depth analysis of the Triton incident.
 Key findings include the following.
 Untargeted ransomware attacks as well as targeted state-sponsored operations both present prevalent threats to the ICS landscape.
-Adversaries often use techniques like spearphishing, zero-day exploits, sophisticated obfuscation, and evasion techniques, and living off the land tools to extract data and cause disruption.
+Adversaries often use techniques like spearphishing, zero-day exploits, sophisticated obfuscation and evasion techniques, and living off the land tools to extract data and cause disruption.
 Suitable defense strategies include increasing the security awareness of employees, strictly separating the ICS network from the enterprise IT network, and establishing a reliable backup strategy.
 
 \keywords{ICS Security \and ICS Attacks \and Threat Actors \and Triton.}
@@ -97,7 +97,7 @@ First, there are incident enumerations like the Risi Database\footnote{\url{http
 Second, ICS security companies like Dragos \cite{dragos.19} and CyberX \cite{cyberx.19} publish yearly ICS threat reports discussing relevant incidents.
 % Those reports are neither complete with regards to the incidents they cover nor do they provide in-depth analyses of the covered attacks.
 % However, they highlight important trends in the threat landscape throughout the years.
-Third, dedicated scientific papers are focusing on single ICS incidents like the attacks targeting the Ukraine power grid \cite{eisac.16} or the Triton malware \cite{pinto.18}.
+Third, dedicated scientific papers are focusing on specific ICS incidents like the attacks targeting the Ukraine power grid \cite{eisac.16} or the Triton malware \cite{pinto.18}.
 % Those papers usually cover single incidents in-depth and help in understanding how exactly the adversaries operated.
 Fourth, there are numerous blog posts, press releases, and conference talks covering ICS incidents.
 In addition, there is the MITRE ATT\&CK ICS database\footnote{\url{https://collaborate.mitre.org/attackics/index.php}} which includes information on tactics, techniques, and software used by threat groups to perform ICS attacks.
@@ -475,7 +475,7 @@ Additionally, SIS should be protected by physical access controls and devices to
 % The conclusion summarizes the research and discusses its significance. You should also point out future research directions. The goal is to: Provide a very brief summary of the results, Provide a future perspective on the work, Avoid: repeating the abstract; repeating background information from the introduction; introducing new arguments; repeating the arguments made in the main body; failing to address all of the research questions set out in the introduction.
 % Summary of general trends
 The comparative overview given in \autoref{section:overview} and the detailed analysis of the Triton incident performed in \autoref{section:triton} lead to the following key findings.
-First, not only operations targeting specific ICS environments but also untargeted attacks---e.g. in the form of ransomware---are becoming more and more a threat to ICS.
+First, not only operations targeting specific ICS environments but also untargeted attacks---e.g. in the form of ransomware---are becoming more and more a threat to industrial environments.
 Second, most of the ICS incidents are considered to be state-sponsored.
 Third, important trends in terms of attack techniques are spearphishing, zero-day exploits, sophisticated obfuscation and evasion techniques, and living off the land tools.
 Fourth, the most common goals of ICS attacks are data extraction and causing disruption.
@@ -483,9 +483,9 @@ Fifth, attackers usually reside in the victims' network for several weeks or mon
 % Learn from past mistakes: summary of detection & mitigation strategies
 Keeping these trends in mind, possible defense strategies include increasing the security awareness of employees, strictly separating the ICS network from the enterprise IT network, and establishing a reliable backup strategy. \\
 % Future Work: Add more incidents / Study how well companies defend against specific threats over time (first bad than better and better?) / Compare detection and mitigation products from different vendors / Evaluate the effectiveness of detection and mitigation strategies via honeypots
-To build upon these results and to make them more precise it would be useful to include additional ICS incidents to the 27 that are considered in the proposed overview.
+To build upon these results and to make them more precise it would be useful to include additional ICS incidents to the 27 that are already considered in the proposed overview.
 Additionally, it could be interesting to study how ICS companies manage to defend against known threats over the course of time.
-Core hypotheses to test would be if companies are more likely to defend against a certain threat the longer it is publicly known and if so, how fast this adaptation of defense strategies happens.
+Core hypotheses to test would be if companies are more likely to defend their infrastructure successfully against a certain threat the longer it is publicly known and if so, how fast this adaptation of defense strategies happens.
 Furthermore, a comparison of detection and mitigation products from different vendors with an according evaluation---possibly utilizing ICS honeypots---could be considered.
 
 
