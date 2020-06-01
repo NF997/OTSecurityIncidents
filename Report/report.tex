@@ -63,20 +63,21 @@ Suitable defense strategies include increasing the security awareness of employe
 % OT Security <-> IT Security: very recent trend, first incidents
 Industrial Control Systems (ICS) are used in a wide variety of industries such as food and agriculture, energy, water, transportation, chemical, nuclear power, pharmaceutical, and discrete manufacturing \cite{stouffer.2011}.
 Initially, they were not connected to the internet and strictly separated from enterprise IT networks.
-Due to this isolation, it was hard, if not impossible, for adversaries to remotely attack ICS, which is why until recently security was not a big concern to companies running ICS.Instead, they traditionally focus on the safety, continuity, and efficiency of their systems.
+Due to this isolation, it was hard, if not impossible, for adversaries to remotely attack ICS, which is why until recently security was not a big concern to companies running ICS.
+% Instead, they traditionally focus on the safety, continuity, and efficiency of their systems.
 However, the attack surface of many ICS changed within the last two decades since they got connected to traditional IT networks and the internet---sometimes intentionally, sometimes by mistake.
 Inevitably, this led to an ongoing series of ICS security incidents.\\
 % Problem: No overview; Contribution: Overview
 While more and more of those incidents are reported, it is business-critical to develop suitable detection and mitigation strategies.
-A solid baseline in this process is analyzing and learning from past incidents.
+An essential baseline in this process is analyzing and learning from past incidents.
 This is crucial to avoid common mistakes and to effectively prevent future incidents.
 To support this process, this paper proposes a systematic comparative overview of historic ICS security incidents focusing on various parameters including targets, threat actors, attack techniques, goals and impacts, dwell times, operator reactions, and detection and mitigation strategies.
 % Benefits of an overview: Helps to identify patterns and to prevent future incidents (?)
 The overview aims at identifying common attack patterns that could be used to prevent future attacks.
 To the best of the author's knowledge, such an overview has not yet been published.\\
 % Triton
-Additionally, the Triton incident of 2017 is analyzed in detail to showcase how attackers perform sophisticated ICS attacks and which detection and mitigation strategies can be derived from their methodologies.
-The incident was chosen due to its potential life-threatening impact and the novel attack approach targeting Safety Instrumented Systems (SIS).\\
+Additionally, the Triton incident of 2017 is analyzed in detail to showcase how attackers perform sophisticated ICS attacks and which detection and mitigation strategies can be derived from their methodologies.\\
+% The incident was chosen due to its potential life-threatening impact and the novel attack approach targeting Safety Instrumented Systems (SIS).\\
 
 % Outline
 The remainder of the paper is structured as follows.
@@ -90,13 +91,14 @@ Exemplary the Triton incident is analyzed in detail in \autoref{section:triton}.
 There are four main types of publicly available sources that provide information on ICS security incidents.
 % Enumerations: RISI Database, ICS-CERT Alerts from the US Government,
 First, there are incident enumerations like the Risi Database\footnote{\url{https://www.risidata.com/Database}} and the ICS-CERT Alerts\footnote{\url{https://www.us-cert.gov/ics/alerts}}.
-On the one hand, the fact that those repositories aim to aggregate all observed ICS incidents from around the world makes them useful for getting a high-level overview of the current threat landscape.
-On the other hand, however, they only provide basic information about the incidents and do not analyze them in detail.
+% On the one hand, the fact that those repositories aim to aggregate all observed ICS incidents from around the world makes them useful for getting a high-level overview of the current threat landscape.
+% On the other hand, however, they only provide basic information about the incidents and do not analyze them in detail.
 % Reports from Companies in the field: Dragos Threat Report, CyberX Global IoT/ICS Risk Report,...
 Second, ICS security companies like Dragos \cite{dragos.19} and CyberX \cite{cyberx.19} publish yearly ICS threat reports discussing relevant incidents.
-Those reports are neither complete with regards to the incidents they cover nor do they provide in-depth analyses of the covered attacks.
-However, they highlight important trends in the threat landscape throughout the years.
-Third, dedicated scientific papers are focusing on single ICS incidents like the attacks targeting the Ukraine power grid \cite{eisac.16} or the Triton malware \cite{pinto.18}. Those papers usually cover single incidents in-depth and help in understanding how exactly the adversaries operated.
+% Those reports are neither complete with regards to the incidents they cover nor do they provide in-depth analyses of the covered attacks.
+% However, they highlight important trends in the threat landscape throughout the years.
+Third, dedicated scientific papers are focusing on single ICS incidents like the attacks targeting the Ukraine power grid \cite{eisac.16} or the Triton malware \cite{pinto.18}.
+% Those papers usually cover single incidents in-depth and help in understanding how exactly the adversaries operated.
 Fourth, there are numerous blog posts, press releases, and conference talks covering ICS incidents.
 In addition, there is the MITRE ATT\&CK ICS database\footnote{\url{https://collaborate.mitre.org/attackics/index.php}} which includes information on tactics, techniques, and software used by threat groups to perform ICS attacks.
 Furthermore, there is a paper proposing an overview of historical ICS security incidents \cite{hemsley.18}.
@@ -175,11 +177,12 @@ This kind of incidental infections of ICS systems with malware originally intend
 Since untargeted attacks are not aimed at specific entities but often solely intend to infect as many systems as possible, e.g. with self-replicating components, there is in general no pattern observable in terms of the geographical location or the economic sector of the affected parties.
 Targeted attacks, however, can be analyzed for such patterns.\\
 % Country
-When it comes to the geographical location of ICS attack victims, the areas most often affected seem to be Europe and the Middle East.
-Companies located in Europe are targeted by about 37\% of the analyzed attacks. The country affected the most until now is Ukraine falling victim to multiple attacks targeting its power grid.
+When it comes to the geographical location of ICS attack victims, the most affected regions seem to be Europe and the Middle East.
+Companies located in Europe are targeted by about 37\% of the analyzed attacks.
+The country affected the most until now is Ukraine falling victim to multiple attacks targeting its power grid.
 The Middle East is being targeted by about 33\% of the analyzed attacks.
-Especially companies located in Saudi Arabia often fall victim to attacks.
-Probably the most well-known incident taking place there was Triton, which targeted a Saudi Arabian petrochemical plant and is covered in depth by \autoref{section:triton}.
+% Especially companies located in Saudi Arabia often fall victim to attacks.
+% Probably the most well-known incident taking place there was Triton, which targeted a Saudi Arabian petrochemical plant and is covered in depth by \autoref{section:triton}.
 In about 19\% of the analyzed incidents, the US were amongst the victims.
 Note that while being home to important global threat actors as discussed in \autoref{subsection:overview-actors}, neither Russia nor China nor North Korea report a lot of ICS incidents against entities located in their countries.
 % However, this does not necessarily mean that no ICS incidents occur in these countries, but it could also be the case that incidents are just not as liberally published as by other countries.
@@ -196,8 +199,8 @@ The remaining victims of ICS attacks are spread across a wide variety of other e
 % General
 In total, at least 16 specific threat actors were involved in the analyzed ICS incidents according to the current state of research.
 % (
-Note, that there are often multiple names for a single threat group that originate from different ICS security agencies and companies \cite{thaicert.19} and can be used interchangeably.
-This paper tries to use to the most commonly used names regardless of which entity coined them.\\
+% Note, that there are often multiple names for a single threat group that originate from different ICS security agencies and companies \cite{thaicert.19} and can be used interchangeably.
+% This paper tries to use to the most commonly used names regardless of which entity coined them.\\
 % )
 % Problem of Attribution
 When it comes to the threat actors responsible for ICS attacks there is the fundamental issue of attribution.
@@ -215,9 +218,9 @@ The most active threat actors according to the sample of incidents taken into ac
 Interesting to note is that some threat groups primarily act on their own while others tend to collaborate with others.
 For example, APT33 often collaborates with other Iranian threat groups, whereas Energetic Bear mostly acts on its own.
 % Team Size
-When it comes to the team size, only one threat actor corresponds to a single person, all others are groups comprised of multiple people.
-This person, Vitak Boden, performed what can be considered one of the first ICS attacks ever.
-To take revenge on a wastewater facility where he was rejected when applying for a job, he manipulated the sewage pumping stations via a radio frequency transmitter, which lead to millions of gallons of untreated sewage water being released into waterways and local parks \cite{hemsley.18}.
+When it comes to the team size, only one threat actor corresponds to a single person---Vitak Boden in the Maroochy Water incident.
+% This person, Vitak Boden, performed what can be considered one of the first ICS attacks ever.
+% To take revenge on a wastewater facility where he was rejected when applying for a job, he manipulated the sewage pumping stations via a radio frequency transmitter, which lead to millions of gallons of untreated sewage water being released into waterways and local parks \cite{hemsley.18}.
 Since this incident in the year 2000, ICS attacks got a lot more sophisticated which is why the team size of threat groups continues to grow.\\
 % Who is behind threat groups? Nation State Actors?
 At least 59\% of the analyzed attacks are considered to be performed by government-funded threat actors.
@@ -228,32 +231,32 @@ ICS attacks are therefore sometimes even considered an act of war \cite{lindsey.
 \subsection{Attack Techniques}
 \label{subsection:overview-techniques}
 % ICS cyber kill chain
-An established model to characterize ICS attacks is the ICS Cyber Kill Chain developed by the SANS institute and depicted in \autoref{fig:CyberKillChain}.
+An established model to characterize ICS attacks is the ICS Cyber Kill Chain depicted in \autoref{fig:CyberKillChain}.
 It is comprised of two stages.
 In stage one, IT intrusion preparation and execution happens, i.e. the attacker compromises the IT network and positions herself in the ICS network.
 This stage can be completed without specific knowledge about ICS technologies or protocols.
-In stage two, ICS attack development and execution are performed, e.g. an attack targeting certain actuators---for example, water pumps---is developed, tested, and executed.
+In stage two, ICS attack development and execution are performed, e.g. an attack targeting certain actuators---for example, water pumps---is developed, tested, and executed.\\
+When it comes to the initial access in stage one of the ICS Cyber Kill Chain, two attack techniques seem to be most popular among the analyzed incidents.
+The first one is spearphishing, which was reportedly performed in at least 26\% of the attacks.
+The second one is the utilization of zero-day exploits, which was observed in at least 11\% of the attacks.
+When inside the victims' IT network, attackers often use common software.
+For example, in at least 11\% of the cases, Mimikatz was used for credential capturing.
+Popular exploitation frameworks like Metasploit and Cobalt Strike are frequently used, too.
+More recent trends are the use of sophisticated obfuscation and evasion techniques and \textit{living off the land} tools---like PowerShell or PsExec---to avoid being detected by Intrusion Detection Systems (IDS).
 \begin{figure}[H]
     \centering
     \includegraphics[width=8cm]{figures/ICSCyberKillChain.png}
     \caption{ICS Cyber Kill Chain as introduced by the SANS institute, from \cite{assante.15}.}
     \label{fig:CyberKillChain}
 \end{figure}\noindent
-When it comes to the initial access in stage one of the ICS Cyber Kill Chain, two attack techniques seem to be most popular among the analyzed incidents.
-The first one is spearphishing, which was reportedly performed in at least 26\% of the attacks.
-The second one is the utilization of zero-day exploits, which was observed in at least 11\% of the attacks.
-When inside the victims' IT network, attackers often use common software.
-For example, in at least 11\% of the cases, Mimikatz was used for credential capturing.
-Often, popular exploitation frameworks like Metasploit and Cobalt Strike are used, too.
-More recent trends are the use of sophisticated obfuscation and evasion techniques and \textit{living off the land} tools---like PowerShell or PsExec---to avoid being detected by Intrusion Detection Systems (IDS).\\
 % Untargeted Attacks
-Since the core of untargeted attacks is usually ransom- or wiperware, they do not go beyond stage one of the ICS Cyber Kill Chain.
+Since untargeted attacks usually rely on ransom- or wiperware, they do not go beyond stage one of the ICS Cyber Kill Chain.
 % Targeted Attacks
-Targeted attacks, however, aim more and more often to exploit the ICS environment, which requires the attackers to first gain access to the ICS network.
+Targeted attacks, however, aim more and more often to exploit specific ICS environments, which requires the attackers to first gain access to the ICS network.
 One possible way to pivot is lateral movement via Windows authentication services.
 % Stage 2: ICS Attack
 Once in the ICS network, a multitude of different exploit strategies has been reported.
-Most adversaries attack ICS components like Programmable Logic Controllers (PLCs) or SIS to modify their behavior or to make them fail altogether.
+Most adversaries attack ICS components like Programmable Logic Controllers (PLCs) or Safety Instrumented Systems (SIS) to modify their behavior or to make them fail altogether.
 Doing so, they are often able to control actuators like water pumps, fake the values of sensors, or turn off the power supply.
 To make disaster recovery harder, attackers often wipe Human-Machine Interfaces (HMIs), too.
 % Special Case: Target Store's HVAC
@@ -349,18 +352,17 @@ Last but not least, it is essential to have a solid backup strategy that allows 
 
 \section{Detailed Analysis of the Triton Attack}
 \label{section:triton}
-While the previous section conducted a comparative overview of the most prevalent ICS security incidents to highlight general trends, this section focusses on a single attack to detail how insight gained from such an analysis can be used to prepare for future attacks.
+While the previous section conducted a comparative overview of the most prevalent ICS security incidents to highlight general trends, this section focusses on a specific attack to detail how insight gained from such an analysis can be used to prepare for future attacks.
 Exemplary, the Triton attack targeting a Saudi Arabian petrochemical plant in 2017 is analyzed.
-The incident---also known as Trisis \cite{dragos.17} and HatMan\footnote{\url{https://www.us-cert.gov/ics/MAR-17-352-01-HatMan—Safety-System-Targeted-Malware}}---is chosen as an example for several reasons.
+The incident---also known as Trisis \cite{dragos.17} and HatMan\footnote{\url{https://www.us-cert.gov/ics/MAR-17-352-01-HatMan—Safety-System-Targeted-Malware}}---is chosen as an example since it is considered to be of significant importance to the ICS community \cite{dragos.17}.
 First and foremost it was the first attack targeting SIS and therefore potentially threatening human lives.
 Additionally, the attack was highly sophisticated, and even when it was eventually detected by the plant operators, they were not able to stop it immediately.
-For these reasons, Triton is considered to be of significant importance to the ICS community \cite{dragos.17}.
 % Outline?
 \subsection{Attack and Response Strategies}
 \label{subsection:triton-attack-response}
 % Stage 1
-As described in \autoref{subsection:overview-techniques}, an ICS attack usually is comprised of the two stages of the ICS Cyber Kill Chain.
-When it comes to Triton, the details of stage one are still unclear.
+% As described in \autoref{subsection:overview-techniques}, an ICS attack usually is comprised of the two stages of the ICS Cyber Kill Chain.
+When it comes to Triton, the details of stage one of the ICS Cyber Kill Chain are still unclear.
 It seems that the IT network of the Petro Rabigh oil refinery got breached already in 2014, however, the exact techniques used for the initial access and the movement into the ICS network are not unambiguously known.
 It is suspected, however, that the initial access happened via a spearphishing attack \cite{nohe.19}.
 \\
@@ -370,11 +372,11 @@ Stage two of the ICS Cyber Kill Chain began shortly after the initial breach of 
 SIS are an integral part of ICS in that their sole purpose is to maintain safe operations should failures of other hard- or software occur.
 They should prevent catastrophic incidents like explosions or fire and protect human lives \cite{pinto.18}.
 It is therefore crucial that this last line of automated safety defense operates correctly.
-The functionality of an SIS can be broken down as follows.
+% The functionality of an SIS can be broken down as follows.
 The inputs for an SIS are an array of sensors measuring physical values e.g. temperature, pressure, or rotation speed.
 In real-time, the SIS analyzes these values and outputs a single decision: if it is safe to continue operation.
-Should the SIS decide that there is an unsafe physical condition, suitable commands are sent to according actuators like water pumps, machine engines, or valves.
-E.g. if an SIS would detect a dangerously high temperature in a gas tank, the valves regulating the gas inflow would be closed. \cite{dragos.17} \\
+Should the SIS decide that there is an unsafe physical condition, suitable commands are sent to according actuators like water pumps, machine engines, or valves. \cite{dragos.17}\\
+% E.g. if an SIS would detect a dangerously high temperature in a gas tank, the valves regulating the gas inflow would be closed. \cite{dragos.17} \\
 % Attack method
 To protect an SIS from unintended modification, there is a physical keyswitch controlling the mode of operation.
 Under normal circumstances, this switch should be set to \textit{run}, which disables arbitrary changes to the logic of the SIS.
@@ -414,8 +416,9 @@ After the SIS tripped a second time, the plant operators brought in ICS security
 \label{subsection:triton-goals-impact-attribution}
 % Goal unknown, potentially killing people
 As of today, the motivations behind the Triton attack remain unclear.
-At least, there is no reason to believe that it was meant to be part of an espionage operation because no spyware tools like key loggers were used. % Citation?
-Since the adversaries specifically targeted the SIS, it is more likely that the goal of the attacks was to cause disruption.
+However, since the adversaries specifically targeted the SIS, it is likely that the goal was to cause disruption.
+% At least, there is no reason to believe that it was meant to be part of an espionage operation because no spyware tools like key loggers were used. % Citation?
+% Since the adversaries specifically targeted the SIS, it is more likely that the goal of the attacks was to cause disruption.
 % Plant temporarily shut down
 One way to achieve this is to provoke a shutdown of the plant, which also happens to be the actual impact of the attack.
 In total, the oil refinery was out of operation for multiple weeks. % How long exactly
@@ -424,14 +427,16 @@ Another way of creating disruption is to cause an unsafe physical state leading 
 Potentially this could also lead to threats against human lives.
 Whether or not the latter was indeed part of the adversaries' goals is still unknown.\\
 % TEMP.Veles/Xenotime,Russia
-The reasoning about the underlying motivations together with the fact that the attack required a large amount of resources suggests the threat actor behind the attack to be state-sponsored \cite{kovacs.17}.
+The reasoning about the underlying motivations together with the fact that the attack required a lot of resources suggests the threat actor behind the attack to be state-sponsored \cite{kovacs.17}.
 Indeed, the attackers behind the Triton operation seem to be a Russian threat group, given the name \textit{TEMP.Veles}, which is probably backed by a Russian research institute based in Moscow \cite{fireeye.18}, \cite{sobczak.19}.
 
 \subsection{Detection and Mitigation Opportunities}
 \label{subsection:triton-detection-mitigation}
 % Stage 1
-As described in \autoref{subsection:triton-attack-response}, it is not exactly known how the attackers achieved initial access to the IT network, which is why the following recommendations focus more on stage two of the ICS Cyber Kill Chain.
-However, if it should indeed be the case that the initial access happened via spearphishing, this would be a very common scenario that likely can never be remediated completely.
+% As described in \autoref{subsection:triton-attack-response}, it is not exactly known how the attackers achieved initial access to the IT network, which is why the following recommendations focus more on stage two of the ICS Cyber Kill Chain.
+% However, if it should indeed be the case that the initial access happened via spearphishing, this would be a very common scenario that likely can never be remediated completely.
+% An effective countermeasure, however, are continuous security awareness trainings to help employees identify phishing attacks \cite{arachchilage.14}.\\
+If it should indeed be the case that the initial access happened via spearphishing, this would be a very common scenario that likely can never be remediated completely.
 An effective countermeasure, however, are continuous security awareness trainings to help employees identify phishing attacks \cite{arachchilage.14}.\\
 When it comes to ICS security countermeasures that could have prevented the downtimes of the Petro Rabigh refinery, those focusing on SIS are especially promising.
 Two key strategies would potentially have stopped the Triton attack early on.
@@ -469,8 +474,8 @@ Additionally, SIS should be protected by physical access controls and devices to
 \label{section:conclusion}
 % The conclusion summarizes the research and discusses its significance. You should also point out future research directions. The goal is to: Provide a very brief summary of the results, Provide a future perspective on the work, Avoid: repeating the abstract; repeating background information from the introduction; introducing new arguments; repeating the arguments made in the main body; failing to address all of the research questions set out in the introduction.
 % Summary of general trends
-The comparative overview given in \autoref{section:overview} and the detailed analysis of the Triton incident performed in \autoref{section:triton} lead to key findings for different attack attributes.
-First, not only operations targeting specific ICS environments but also untargeted attacks usually dedicated to IT environments---e.g. in the form of ransomware---are becoming more and more a threat to ICS.
+The comparative overview given in \autoref{section:overview} and the detailed analysis of the Triton incident performed in \autoref{section:triton} lead to the following key findings.
+First, not only operations targeting specific ICS environments but also untargeted attacks---e.g. in the form of ransomware---are becoming more and more a threat to ICS.
 Second, most of the ICS incidents are considered to be state-sponsored.
 Third, important trends in terms of attack techniques are spearphishing, zero-day exploits, sophisticated obfuscation and evasion techniques, and living off the land tools.
 Fourth, the most common goals of ICS attacks are data extraction and causing disruption.
