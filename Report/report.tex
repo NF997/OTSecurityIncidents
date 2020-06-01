@@ -355,8 +355,8 @@ Last but not least, it is essential to have a solid backup strategy that allows 
 While the previous section conducted a comparative overview of the most prevalent ICS security incidents to highlight general trends, this section focusses on a specific attack to detail how insight gained from such an analysis can be used to prepare for future attacks.
 Exemplary, the Triton attack targeting a Saudi Arabian petrochemical plant in 2017 is analyzed.
 The incident---also known as Trisis \cite{dragos.17} and HatMan\footnote{\url{https://www.us-cert.gov/ics/MAR-17-352-01-HatMan—Safety-System-Targeted-Malware}}---is chosen as an example since it is considered to be of significant importance to the ICS community \cite{dragos.17}.
-First and foremost it was the first attack targeting SIS and therefore potentially threatening human lives.
-Additionally, the attack was highly sophisticated, and even when it was eventually detected by the plant operators, they were not able to stop it immediately.
+Most importantly, it was the first attack targeting SIS and therefore potentially threatening human lives.
+In addition, the attack was highly sophisticated, and even when it was eventually detected by the plant operators, they were not able to stop it immediately.
 % Outline?
 \subsection{Attack and Response Strategies}
 \label{subsection:triton-attack-response}
@@ -381,7 +381,7 @@ Should the SIS decide that there is an unsafe physical condition, suitable comma
 To protect an SIS from unintended modification, there is a physical keyswitch controlling the mode of operation.
 Under normal circumstances, this switch should be set to \textit{run}, which disables arbitrary changes to the logic of the SIS.
 In the case of Petro Rabigh, however, the switch was set to \textit{program mode}, which allows for logic changes.
-Why this was the case is not known, but it might very likely be the case that an engineer programming the SIS simply forgot to switch it back to \textit{run} mode.
+Why this was the case is unknown, but it might have been the case that an engineer programming the SIS simply forgot to switch it back to \textit{run} mode.
 In addition to these modes of operation, network connectivity to an SIS should, in theory, be extremely limited if existent at all.
 In practice, for example, plant operators sometimes want to retrieve data from SIS to analyze them, which is why they allow for more network connectivity than needed for reasons of convenience.
 This might have been the case at Petro Rabigh, too.
