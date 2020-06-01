@@ -13,7 +13,8 @@
 % If you use the hyperref package, please uncomment the following line
 % to display URLs in blue roman font according to Springer's eBook style:
 \renewcommand\UrlFont{\color{blue}\rmfamily}
-
+\def\sectionautorefname{Section}
+\def\subsectionautorefname{Subsection}
 
 \begin{document}
 %
@@ -78,11 +79,12 @@ Additionally, the Triton incident of 2017 will be analyzed in detail to showcase
 The incident was chosen due to its potential life-threatening impact and the novel attack approach targeting Safety Instrumented Systems (SIS).\\
 % Outline
 The remainder of the paper is structured as follows.
-Section 2 provides an overview of related work in the area of ICS incidents which is used as the basis of the comparative overview that is provided in Section 3.
-Exemplary the Triton incident is analyzed in detail in Section 4.
-Section 5 concludes the paper by summarizing key findings and suggesting directions for future work.
+\autoref{section:related-work} provides an overview of related work in the area of ICS incidents which is used as the basis of the comparative overview that is provided in \autoref{section:overview}.
+Exemplary the Triton incident is analyzed in detail in \autoref{section:triton}.
+\autoref{section:conclusion} concludes the paper by summarizing key findings and suggesting directions for future work.
 
 \section{Related Work}
+\label{section:related-work}
 % In this section, you provide an overview of papers written by other scientists that have covered a problem similar to yours. You can find related work in web search engines and scientific literature databases. Some of the most prominent ones in the field of computer science are: Google Scholar, Scopus, ACM Digital Library, IEEE Xplore, Lecture Notes in Computer Science.
 There are four main types of publicly available sources that provide information on ICS security incidents.
 % Enumerations: RISI Database, ICS-CERT Alerts from the US Government,
@@ -103,8 +105,9 @@ All of the above-mentioned sources are taken into account to achieve exactly thi
 % Other papers covering the big incidents: Ukraine, Triton,...
 % IT incidents overview
 \section{Comparative Overview of ICS Security Incidents}
-From the literature and resources stated in Section 2, a total of 27 ICS security incidents were extracted.
-Those form the basis of the following analysis and can be found in Table \ref{tab:incidents}.
+\label{section:overview}
+From the literature and resources stated in \autoref{section:related-work}, a total of 27 ICS security incidents were extracted.
+Those form the basis of the following analysis and can be found in \autoref{tab:incidents}.
 Note that due to incidents not being reported, the tremendous amount of incidents that are reported and new incidents occurring steadily, this table is inherently incomplete, but rather tries to focus on the most prevalent attacks launched until February 2020.
 The following subsections provide a comparative overview of these incidents.
 Each subsection aims to compare the incidents with regards to specific attributes, e.g. the involved threat actors or the utilized attack techniques.
@@ -154,6 +157,7 @@ Each subsection aims to compare the incidents with regards to specific attribute
 
 
 \subsection{Targets}
+\label{subsection:overview-targets}
 % Targeted vs. Untargeted
 When analyzing the entities affected by ICS security incidents there are two fundamentally different kinds of attacks that have to be considered separately.
 On the one hand, there are targeted attacks against unique entities.
@@ -172,9 +176,9 @@ Targeted attacks, however, can be analyzed for such patterns.\\
 % Country
 When it comes to the geographical location of ICS attack victims, the areas most often affected seem to be Europe and the Middle East.
 Companies located in Europe are targeted by about 37\% of the analyzed attacks. The country affected the most until now is Ukraine falling victim to multiple attacks targeting its power grid.
-The Middle East is being targeted by about 33\% of the analyzed attacks. Especially companies located in Saudi Arabia often fall victim to attacks. Probably the most well-known incident taking place there was Triton which targeted a Saudi Arabian petrochemical plant and will be covered in depth in Section 4.
+The Middle East is being targeted by about 33\% of the analyzed attacks. Especially companies located in Saudi Arabia often fall victim to attacks. Probably the most well-known incident taking place there was Triton which targeted a Saudi Arabian petrochemical plant and will be covered in depth in \autoref{section:triton}.
 In about 19\% of the analyzed incidents, the US were amongst the victims.
-Note that while being home to important global threat actors as discussed in Subsection 3.2, neither Russia nor China nor North Korea report a lot of ICS incidents against entities located in their countries.
+Note that while being home to important global threat actors as discussed in \autoref{subsection:overview-actors}, neither Russia nor China nor North Korea report a lot of ICS incidents against entities located in their countries.
 % However, this does not necessarily mean that no ICS incidents occur in these countries, but it could also be the case that incidents are just not as liberally published as by other countries.
 % Especially China and North Korea are known for withholding most of the cyber attacks taking place in their country [citation].
 \\
@@ -185,6 +189,7 @@ Other examples of targeted entities within the energy sector include oil and gas
 The remaining victims of ICS attacks are spread across a wide variety of other economic sectors including manufacturing, water, petrochemical, governmental organizations, and transportation.
 
 \subsection{Threat Actors}
+\label{subsection:overview-actors}
 % General
 In total, at least 16 specific threat actors were involved in the analyzed ICS incidents according to the current state of research.
 % (
@@ -218,8 +223,9 @@ On the other hand, governments can profit in various ways from ICS attacks again
 ICS attacks are therefore sometimes even considered an act of war \cite{lindsey.19}. % further research.
 
 \subsection{Attack Techniques}
+\label{subsection:overview-techniques}
 % ICS cyber kill chain
-An established model to characterize ICS attacks is the ICS Cyber Kill Chain developed by the SANS institute and depicted in Figure \ref{fig:CyberKillChain}.
+An established model to characterize ICS attacks is the ICS Cyber Kill Chain developed by the SANS institute and depicted in \autoref{fig:CyberKillChain}.
 It is comprised of two stages.
 In stage one, IT intrusion preparation and execution happens, i.e. the attacker compromises the IT network and positions herself in the ICS network.
 This stage can be completed without specific knowledge about ICS technologies or protocols.
@@ -258,6 +264,7 @@ The first attack in 2015 was highly manual and the effort put into it could not 
 One year later, however, there was a second attack targeting the power grid, but this time the adversaries had developed a framework which in theory allows them to scale their attack to a multitude of different victims with a relatively small effort. \cite{greenberg.17}
 
 \subsection{Attack Goals and Realized Impacts}
+\label{subsection:overview-goals}
 % Common goals
 The most common goal of adversaries is to extract data from the victim's systems. 37\% of all analyzed attacks were designed to achieve exactly this.
 Other goals often persued by attackers are to cause disruption (22\%), to provoke a ransom payment (15\%), and to cause physical damage (11\%).\\
@@ -277,10 +284,11 @@ Typical impacts include information loss, financial loss---via physical damage, 
 Fortunately, until to date, there are no ICS incidents known which killed humans.\\
 % If not successful, why?
 One incident considered to be unsuccessful is the well-known Triton attack which failed for reasons not fully understood up until today.
-Section 4 will provide a detailed analysis of the incident and its impacts.
+\autoref{section:triton} will provide a detailed analysis of the incident and its impacts.
 Furthermore, untargeted attacks often partly fail to achieve their goal since a lot of companies can restore operations without a long outage or paying a ransom thanks to sufficient backup strategies.
 
 \subsection{Dwell Times and Reactions}
+\label{subsection:overview-reactions}
 % Dwell times
 Dwell time describes how long an adversary is in a system before the actual attack payload is executed.
 % While sometimes it is possible to give an accurate estimation for this number thanks to digital forensics after an incident, keep in mind that, in general, this is a non-trivial task and potentially leads to inaccuracies.
@@ -308,6 +316,7 @@ When the final payload was already delivered by the adversaries, however, often 
 % As a result of the Shamoon attack, however, thousands of hard drives were destroyed irretrievably such that the affected company had to quickly buy large amounts of hard drives, which lead to a world-wide shortage of those.
 
 \subsection{Detection and Mitigation Strategies}
+\label{subsection:overview-mitigation}
 % Mitigation against untargeted ransom- & wiperware
 After comparatively analyzing 27 ICS incidents a multitude of potential detection and mitigation strategies can be identified which can be leveraged to defend ICS against future threats.\\
 % Detection
@@ -322,7 +331,7 @@ A more active approach to IDS is threat hunting where security specialists try t
 % Mitigation
 When it comes to suitable mitigation strategies, the first line of defense to strengthen are the humans operating ICS.
 % Security Awareness
-As stated in Subsection 3.3, many adversaries use social engineering for gaining an initial foothold in the victim's network.
+As stated in \autoref{subsection:overview-techniques}, many adversaries use social engineering for gaining an initial foothold in the victim's network.
 The risk of successful phishing compromises can e.g. be reduced by security awareness workshops.
 % Vulnerability Management Software
 More on the technical side of things are vulnerability management solutions.
@@ -336,6 +345,7 @@ They are especially critical in overlapping parts of the IT and ICS networks.
 Last but not least, it is essential to have a solid backup strategy that allows for restoring operations fast and reliable, e.g. in the case of a ransom- or wiperware attack.
 
 \section{Detailed Analysis of the Triton Attack}
+\label{section:triton}
 While the previous section conducted a comparative overview of the most prevalent ICS security incidents to highlight general trends, this section focusses on a single attack to detail how insight gained from such an analysis can be used to prepare for future attacks.
 Exemplary, the Triton attack targetting a Saudi Arabian petrochemical plant in 2017 is analyzed.
 The incident---also known as Trisis \cite{dragos.17} and HatMan\footnote{\url{https://www.us-cert.gov/ics/MAR-17-352-01-HatMan—Safety-System-Targeted-Malware}}---is chosen as an example for several reasons.
@@ -344,8 +354,9 @@ Additionally, the attack was highly sophisticated and even when it was eventuall
 For these reasons, Triton is considered to be of significant importance to the ICS community \cite{dragos.17}.
 % Outline?
 \subsection{Attack and Response Strategies}
+\label{subsection:triton-attack-response}
 % Stage 1
-As described in Subsection 3.3, an ICS attack usually is comprised of the two stages of the ICS Cyber Kill Chain.
+As described in \autoref{subsection:overview-techniques}, an ICS attack usually is comprised of the two stages of the ICS Cyber Kill Chain.
 When it comes to Triton, the details of stage one are still unclear.
 It seems that the IT network of the Petro Rabigh oil refinery got breached already in 2014, however, the exact techniques used for the initial access and the movement into the ICS network are not unambiguously known.
 It is suspected, however, that the initial access happened via a spearphishing attack \cite{nohe.19}.
@@ -397,6 +408,7 @@ After the SIS tripped a second time, the plant operators brought in ICS security
 % And then?
 
 \subsection{Goals, Impacts, and Attribution}
+\label{subsection:triton-goals-impact-attribution}
 % Goal unknown, potentially killing people
 As of today, the motivations behind the Triton attack remain unclear.
 At least, there is no reason to believe that it was meant to be part of an espionage operation because no spyware tools like key loggers were used. % Citation?
@@ -413,8 +425,9 @@ The reasoning about the underlying motivations together with the fact that the a
 Indeed, the attackers behind the Triton operation seem to be a Russian threat group, given the name \textit{TEMP.Veles}, which is probably backed by a Russian research institute based in Moscow \cite{fireeye.18}, \cite{sobczak.19}.
 
 \subsection{Detection and Mitigation Opportunities}
+\label{subsection:triton-detection-mitigation}
 % Stage 1
-As described in Subsection 4.1 it is not exactly known how the attackers achieved initial access to the IT network which is why the following recommendations focus more on stage two of the ICS Cyber Kill Chain.
+As described in \autoref{subsection:triton-attack-response} it is not exactly known how the attackers achieved initial access to the IT network which is why the following recommendations focus more on stage two of the ICS Cyber Kill Chain.
 However, if it should indeed be the case that the initial access happened via spearphishing, this would be a very common scenario that likely can never be remediated completely.
 An effective countermeasure, however, are continuous security awareness trainings to help employees identify phishing attacks \cite{arachchilage.14}.\\
 When it comes to ICS security countermeasures which could have prevented the downtimes of the Petro Rabigh refinery, those focussing on SIS are especially promising.
@@ -450,9 +463,10 @@ Additionally, SIS should be protected by physical access controls and devices to
 % Although the attack is not highly scalable, the tradecraft displayed is now available as a blueprint to other adversaries looking to target SIS and represents an escalation in the type of attacks seen to date as it is specifically designed to target the safety function of the process
 % Second Triton attack in 2018
 \section{Conclusion}
+\label{section:conclusion}
 % The conclusion summarizes the research and discusses its significance. You should also point out future research directions. The goal is to: Provide a very brief summary of the results, Provide a future perspective on the work, Avoid: repeating the abstract; repeating background information from the introduction; introducing new arguments; repeating the arguments made in the main body; failing to address all of the research questions set out in the introduction.
 % Summary of general trends
-The comparative overview given in Section 3 and the detailed analysis of the Triton incident performed in Section 4 lead to key findings for different attack attributes.
+The comparative overview given in \autoref{section:overview} and the detailed analysis of the Triton incident performed in \autoref{section:triton} lead to key findings for different attack attributes.
 First, not only operations targeting specific ICS environments but also untargeted attacks usually dedicated to IT environments---e.g. in the form of ransomware---are becoming more and more a threat to ICS.
 Second, most of the ICS incidents are considered to be state-sponsored.
 Third, important trends in terms of attack techniques are spearphishing, zero-day exploits, sophisticated obfuscation and evasion techniques, and living off the land tools.
