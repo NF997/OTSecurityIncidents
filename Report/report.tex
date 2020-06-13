@@ -312,7 +312,7 @@ There are some cases---BlackEnergy and Triton---where the administrators were ab
 % Untargeted attacks: Pay ransom (via insurance) or restore via backup (maybe buy new hard drives <-> Shamoon)
 When it comes to reacting to an untargeted attack, there is sometimes the option to pay a ransom to get the hard drives decrypted again by the adversary.
 While this should be avoided, since there is no certainty that the attackers will indeed decrypt the hard drives as promised, there are still cases known were the ransom was paid.
-Often companies have dedicated insurances that cover such ransom demands under certain circumstances.
+% Often companies have dedicated insurances that cover such ransom demands under certain circumstances.
 The typical response to a destructive untargeted attack, however, is to restore operations from backups.
 % Targeted attacks: When medium usually shutdown like Triton
 % When late digital forensics
@@ -324,11 +324,11 @@ When the final payload was already delivered by the adversaries, however, often 
 \subsection{Detection and Mitigation Strategies}
 \label{subsection:overview-mitigation}
 % Mitigation against untargeted ransom- & wiperware
-After comparatively analyzing 27 ICS incidents a multitude of potential detection and mitigation strategies can be identified which can be leveraged to defend ICS against future threats.\\
+% After comparatively analyzing 27 ICS incidents a multitude of potential detection and mitigation strategies can be identified which can be leveraged to defend ICS against future threats.\\
 % Detection
 % Asset Inventory
 To be able to detect ongoing ICS attacks, the first fundamental resource is an up-to-date asset inventory.
-Only with that, possibly dangerous network or host activity can be detected.
+Only with that, possibly dangerous activities can be detected.
 % Anomaly/Incident Detection System
 Such detection is usually offered by IDS that lookout, e.g. on network tabs or SPAN ports, for anomalies in the network traffic.
 Compared to traditional IT networks, this is a quite promising approach, since---in contrast to IT networks---the expected network traffic does not vary much such that false positives can be relatively easy tuned to a minimum.
@@ -373,7 +373,7 @@ SIS are an integral part of ICS in that their sole purpose is to maintain safe o
 They should prevent catastrophic incidents like explosions or fire and protect human lives \cite{pinto.18}.
 It is therefore crucial that this last line of automated safety defense operates correctly.
 % The functionality of an SIS can be broken down as follows.
-The inputs for an SIS are an array of sensors measuring physical values e.g. temperature, pressure, or rotation speed.
+The inputs for an SIS are sensors measuring physical values e.g. temperature, pressure, or rotation speed.
 In real-time, the SIS analyzes these values and outputs a single decision: if it is safe to continue operation.
 Should the SIS decide that there is an unsafe physical condition, suitable commands are sent to according actuators like water pumps, machine engines, or valves. \cite{dragos.17}\\
 % E.g. if an SIS would detect a dangerously high temperature in a gas tank, the valves regulating the gas inflow would be closed. \cite{dragos.17} \\
@@ -386,10 +386,9 @@ In addition to these modes of operation, network connectivity to an SIS should, 
 In practice, for example, plant operators sometimes want to retrieve data from SIS to analyze them, which is why they allow for more network connectivity than needed for reasons of convenience.
 This might have been the case at Petro Rabigh, too.
 \cite{dragos.17}\\
-After the adversaries had found out the exact type of SIS the plant was using, they left for about two years.
-It may very well be the case that in this timespan they managed to acquire a physical copy of the same type of SIS and developed a targeted malware that came to be known as Triton.
-After this timeframe, they returned to the oil refinery and installed the malware on the SIS.
-The goal of the malware was to change the internal logic of the SIS, which could lead to severe consequences.
+After the adversaries had found out the exact type of SIS the plant was using, they left for about two years and developed the targeted malware that came to be known as Triton.
+Thereafter, they returned and installed the malware on the SIS.
+The goal of Triton was to change the internal logic of the SIS, which could lead to severe consequences.
 It could, for example, reprogram the SIS in a way such that it would not shut down the plant in the case of an emergency. \cite{lee.20}\\
 % First outage
 Indeed, shortly after the malware was installed, the SIS tripped and shut down the oil refinery.
@@ -407,7 +406,8 @@ Indeed, they were able to identify the bug, which made the Triton malware fail i
 They tried to fix this bug and attacked the SIS again.
 % Second outage
 Just like a few weeks before, the SIS tripped and the refinery was shut down again.
-In hindsight, it turned out that the attackers did not correctly fix the bug so essentially, the attack finally failed due to human error.
+In hindsight, it turned out that the attackers did not correctly fix the bug.
+So essentially, the attack finally failed due to human error.
 % Response
 After the SIS tripped a second time, the plant operators brought in ICS security specialists which were able to identify that the SIS was infected with malware.
 % And then?
@@ -438,7 +438,7 @@ Indeed, the attackers behind the Triton operation seem to be a Russian threat gr
 % An effective countermeasure, however, are continuous security awareness trainings to help employees identify phishing attacks \cite{arachchilage.14}.\\
 If it should indeed be the case that the initial access happened via spearphishing, this would be a very common scenario that likely can never be remediated completely.
 An effective countermeasure, however, are continuous security awareness trainings to help employees identify phishing attacks \cite{arachchilage.14}.\\
-When it comes to ICS security countermeasures that could have prevented the downtimes of the Petro Rabigh refinery, those focusing on SIS are especially promising.
+When it comes to ICS security countermeasures, those focusing on SIS are especially promising.
 Two key strategies would potentially have stopped the Triton attack early on.
 First, an SIS should reside in a very restricted network segment allowing no unnecessary communication to workstations residing possibly even in the IT network.
 Second, SIS should--if not currently programmed by an operator---always be set to \textit{run} mode and never to \textit{program} mode.
