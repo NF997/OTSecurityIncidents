@@ -5,7 +5,7 @@ ENERGY,8+2
 Oil,2
 Nuklear Power,1
 Communications,1
-Petrochemical,3
+(Petro)chemical,3+1
 Aviation,2
 Pharmaceutical,1
 Defense,1
@@ -14,10 +14,11 @@ Agriculture,1
 Technology,2
 Health,1
 Education,1
-Manufacturing,3
+Manufacturing,3+1
 Engineering,1
 Industrial,1
 Gov,2
 Retail,1
 Research,1
 (Waste)water,3
+Other,12
