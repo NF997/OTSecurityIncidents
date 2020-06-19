@@ -1,0 +1,24 @@
+4	(Spear)phishing
+3	Scalable~ICS~Attack~Frameworks
+3	0-Day~Exploits
+3	Ransomware
+2	Exploit~Windows~Vulnerabilities
+2	Exploit~AAD~Vulnerabilities
+2	Social~Engineering
+2	Wiperware
+1	Living~Off~The~Land~Tools
+1	Malware~Obfuscation
+1	Digital~Signatures
+1	Malware~Evasion
+1	RDP~Brute~Force
+1	Cobalt~Strike
+1	SIS~Tampering
+1	EternalBlue
+1	Metasploit
+1	PowerShell
+1	Wipe~HMIs
+1	Mimikatz
+1	PsExec
+1	DoS
+--------------------CloudConfig v3.5--------------------
+{"seed":3799,"ZM_shape":{"img":"/pics/shapes/rectangle.gif","thumb":"/pics/shapes/rectangle.thumb.gif","weightFactor":-25},"ZM_autoWeight":true,"ZM_curShape":"rectangle","ZM_curTheme":"t6","ZM_userWeightAdjust":-30,"ZM_userGridSizeAdjust":12,"ZM_canvasWidth":3000,"ZM_canvasHeight":2000,"ZM_colorMode":"custom","ZM_gradientColors":[],"CO_shape":"circle","CO_backgroundColor":"#fff","CO_colorArray":["#03318c","#021f59","#61a2ca","#30588c","#32628c"],"CO_drawMask":false,"CO_maskColor":"rgba(3,49,140,0.15)","CO_fontFamily":"\"Arial\"","CO_fontWeight":400,"CO_fontStyle":"normal","CO_wordDirection":"updownhor","CO_inverted":false,"CO_drawMode":"inside-out"}
